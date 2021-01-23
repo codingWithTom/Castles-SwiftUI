@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4028AFEA25BC7F6200B4589A /* OutcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028AFE925BC7F6200B4589A /* OutcomeViewModel.swift */; };
+		4028AFED25BC7F9700B4589A /* OutcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028AFEC25BC7F9700B4589A /* OutcomeView.swift */; };
+		4028DF3F25B7BB6600455EC6 /* CastleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028DF3E25B7BB6600455EC6 /* CastleCell.swift */; };
+		403ECE0C25B3372A001203F1 /* CastlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE0B25B3372A001203F1 /* CastlesApp.swift */; };
+		403ECE1025B3372B001203F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403ECE0F25B3372B001203F1 /* Assets.xcassets */; };
+		403ECE1325B3372B001203F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403ECE1225B3372B001203F1 /* Preview Assets.xcassets */; };
+		403ECE2C25B338B4001203F1 /* Kingdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE2625B338B4001203F1 /* Kingdom.swift */; };
+		403ECE2D25B338B4001203F1 /* Outcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE2725B338B4001203F1 /* Outcome.swift */; };
+		403ECE2E25B338B4001203F1 /* Castle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE2825B338B4001203F1 /* Castle.swift */; };
+		403ECE2F25B338B4001203F1 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE2925B338B4001203F1 /* ShopItem.swift */; };
+		403ECE3025B338B4001203F1 /* Turm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE2A25B338B4001203F1 /* Turm.swift */; };
+		403ECE3125B338B4001203F1 /* CastleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE2B25B338B4001203F1 /* CastleItem.swift */; };
+		403ECE4B25B338C8001203F1 /* PurchaseShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3425B338C8001203F1 /* PurchaseShopItem.swift */; };
+		403ECE4C25B338C8001203F1 /* GetOutcomePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3525B338C8001203F1 /* GetOutcomePublisher.swift */; };
+		403ECE4D25B338C8001203F1 /* CreateCastle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3625B338C8001203F1 /* CreateCastle.swift */; };
+		403ECE4E25B338C8001203F1 /* GetGoldPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3725B338C8001203F1 /* GetGoldPublisher.swift */; };
+		403ECE4F25B338C8001203F1 /* UseCastleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3825B338C8001203F1 /* UseCastleItem.swift */; };
+		403ECE5025B338C8001203F1 /* GetShopItemPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3925B338C8001203F1 /* GetShopItemPublisher.swift */; };
+		403ECE5125B338C8001203F1 /* GetTurnPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3A25B338C8001203F1 /* GetTurnPublisher.swift */; };
+		403ECE5225B338C8001203F1 /* PerformBarbarianTurn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3B25B338C8001203F1 /* PerformBarbarianTurn.swift */; };
+		403ECE5325B338C8001203F1 /* PerformPlayerTurn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3C25B338C8001203F1 /* PerformPlayerTurn.swift */; };
+		403ECE5425B338C8001203F1 /* GetCastles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3D25B338C8001203F1 /* GetCastles.swift */; };
+		403ECE5525B338C8001203F1 /* MoveToNextTurn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3E25B338C8001203F1 /* MoveToNextTurn.swift */; };
+		403ECE5625B338C8001203F1 /* GetCastlesPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE3F25B338C8001203F1 /* GetCastlesPublisher.swift */; };
+		403ECE5725B338C8001203F1 /* CurrencyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE4125B338C8001203F1 /* CurrencyPresenter.swift */; };
+		403ECE5825B338C8001203F1 /* CastlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE4225B338C8001203F1 /* CastlePresenter.swift */; };
+		403ECE5925B338C8001203F1 /* TurnPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE4325B338C8001203F1 /* TurnPresenter.swift */; };
+		403ECE5C25B338C8001203F1 /* ShopService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE4725B338C8001203F1 /* ShopService.swift */; };
+		403ECE5D25B338C8001203F1 /* TurnService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE4825B338C8001203F1 /* TurnService.swift */; };
+		403ECE5E25B338C8001203F1 /* OutcomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE4925B338C8001203F1 /* OutcomeService.swift */; };
+		403ECE5F25B338C8001203F1 /* KingdomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE4A25B338C8001203F1 /* KingdomService.swift */; };
+		403ECE6625B3391D001203F1 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE6525B3391D001203F1 /* DashboardView.swift */; };
+		403ECE6A25B33964001203F1 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE6925B33964001203F1 /* DashboardViewModel.swift */; };
+		403ECE6E25B33F5C001203F1 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE6D25B33F5C001203F1 /* ActionCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4028AFE925BC7F6200B4589A /* OutcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeViewModel.swift; sourceTree = "<group>"; };
+		4028AFEC25BC7F9700B4589A /* OutcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeView.swift; sourceTree = "<group>"; };
+		4028DF3E25B7BB6600455EC6 /* CastleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleCell.swift; sourceTree = "<group>"; };
+		403ECE0825B3372A001203F1 /* Castles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		403ECE0B25B3372A001203F1 /* CastlesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastlesApp.swift; sourceTree = "<group>"; };
+		403ECE0F25B3372B001203F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		403ECE1225B3372B001203F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		403ECE1425B3372B001203F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		403ECE2625B338B4001203F1 /* Kingdom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kingdom.swift; sourceTree = "<group>"; };
+		403ECE2725B338B4001203F1 /* Outcome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outcome.swift; sourceTree = "<group>"; };
+		403ECE2825B338B4001203F1 /* Castle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Castle.swift; sourceTree = "<group>"; };
+		403ECE2925B338B4001203F1 /* ShopItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
+		403ECE2A25B338B4001203F1 /* Turm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turm.swift; sourceTree = "<group>"; };
+		403ECE2B25B338B4001203F1 /* CastleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastleItem.swift; sourceTree = "<group>"; };
+		403ECE3425B338C8001203F1 /* PurchaseShopItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseShopItem.swift; sourceTree = "<group>"; };
+		403ECE3525B338C8001203F1 /* GetOutcomePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetOutcomePublisher.swift; sourceTree = "<group>"; };
+		403ECE3625B338C8001203F1 /* CreateCastle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCastle.swift; sourceTree = "<group>"; };
+		403ECE3725B338C8001203F1 /* GetGoldPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetGoldPublisher.swift; sourceTree = "<group>"; };
+		403ECE3825B338C8001203F1 /* UseCastleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCastleItem.swift; sourceTree = "<group>"; };
+		403ECE3925B338C8001203F1 /* GetShopItemPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetShopItemPublisher.swift; sourceTree = "<group>"; };
+		403ECE3A25B338C8001203F1 /* GetTurnPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTurnPublisher.swift; sourceTree = "<group>"; };
+		403ECE3B25B338C8001203F1 /* PerformBarbarianTurn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformBarbarianTurn.swift; sourceTree = "<group>"; };
+		403ECE3C25B338C8001203F1 /* PerformPlayerTurn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformPlayerTurn.swift; sourceTree = "<group>"; };
+		403ECE3D25B338C8001203F1 /* GetCastles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCastles.swift; sourceTree = "<group>"; };
+		403ECE3E25B338C8001203F1 /* MoveToNextTurn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveToNextTurn.swift; sourceTree = "<group>"; };
+		403ECE3F25B338C8001203F1 /* GetCastlesPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCastlesPublisher.swift; sourceTree = "<group>"; };
+		403ECE4125B338C8001203F1 /* CurrencyPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyPresenter.swift; sourceTree = "<group>"; };
+		403ECE4225B338C8001203F1 /* CastlePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastlePresenter.swift; sourceTree = "<group>"; };
+		403ECE4325B338C8001203F1 /* TurnPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnPresenter.swift; sourceTree = "<group>"; };
+		403ECE4725B338C8001203F1 /* ShopService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopService.swift; sourceTree = "<group>"; };
+		403ECE4825B338C8001203F1 /* TurnService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnService.swift; sourceTree = "<group>"; };
+		403ECE4925B338C8001203F1 /* OutcomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutcomeService.swift; sourceTree = "<group>"; };
+		403ECE4A25B338C8001203F1 /* KingdomService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingdomService.swift; sourceTree = "<group>"; };
+		403ECE6525B3391D001203F1 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		403ECE6925B33964001203F1 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		403ECE6D25B33F5C001203F1 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		403ECE0525B3372A001203F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		403ECDFF25B3372A001203F1 = {
+			isa = PBXGroup;
+			children = (
+				403ECE0A25B3372A001203F1 /* Castles */,
+				403ECE0925B3372A001203F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		403ECE0925B3372A001203F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				403ECE0825B3372A001203F1 /* Castles.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		403ECE0A25B3372A001203F1 /* Castles */ = {
+			isa = PBXGroup;
+			children = (
+				403ECE2525B338B4001203F1 /* Model */,
+				403ECE4625B338C8001203F1 /* Services */,
+				403ECE3325B338C8001203F1 /* UseCases */,
+				403ECE4025B338C8001203F1 /* Presenter */,
+				403ECE6125B338F9001203F1 /* Scenes */,
+				403ECE0B25B3372A001203F1 /* CastlesApp.swift */,
+				403ECE0F25B3372B001203F1 /* Assets.xcassets */,
+				403ECE1425B3372B001203F1 /* Info.plist */,
+				403ECE1125B3372B001203F1 /* Preview Content */,
+			);
+			path = Castles;
+			sourceTree = "<group>";
+		};
+		403ECE1125B3372B001203F1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				403ECE1225B3372B001203F1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		403ECE2525B338B4001203F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				403ECE2625B338B4001203F1 /* Kingdom.swift */,
+				403ECE2725B338B4001203F1 /* Outcome.swift */,
+				403ECE2825B338B4001203F1 /* Castle.swift */,
+				403ECE2A25B338B4001203F1 /* Turm.swift */,
+				403ECE2925B338B4001203F1 /* ShopItem.swift */,
+				403ECE2B25B338B4001203F1 /* CastleItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		403ECE3325B338C8001203F1 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				403ECE3625B338C8001203F1 /* CreateCastle.swift */,
+				403ECE3D25B338C8001203F1 /* GetCastles.swift */,
+				403ECE3F25B338C8001203F1 /* GetCastlesPublisher.swift */,
+				403ECE3725B338C8001203F1 /* GetGoldPublisher.swift */,
+				403ECE3525B338C8001203F1 /* GetOutcomePublisher.swift */,
+				403ECE3925B338C8001203F1 /* GetShopItemPublisher.swift */,
+				403ECE3A25B338C8001203F1 /* GetTurnPublisher.swift */,
+				403ECE3E25B338C8001203F1 /* MoveToNextTurn.swift */,
+				403ECE3B25B338C8001203F1 /* PerformBarbarianTurn.swift */,
+				403ECE3C25B338C8001203F1 /* PerformPlayerTurn.swift */,
+				403ECE3425B338C8001203F1 /* PurchaseShopItem.swift */,
+				403ECE3825B338C8001203F1 /* UseCastleItem.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		403ECE4025B338C8001203F1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				403ECE4125B338C8001203F1 /* CurrencyPresenter.swift */,
+				403ECE4225B338C8001203F1 /* CastlePresenter.swift */,
+				403ECE4325B338C8001203F1 /* TurnPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		403ECE4625B338C8001203F1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				403ECE4A25B338C8001203F1 /* KingdomService.swift */,
+				403ECE4925B338C8001203F1 /* OutcomeService.swift */,
+				403ECE4725B338C8001203F1 /* ShopService.swift */,
+				403ECE4825B338C8001203F1 /* TurnService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		403ECE6125B338F9001203F1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				403ECE6225B33905001203F1 /* Dashboard */,
+				403ECE6325B3390A001203F1 /* Outcome */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		403ECE6225B33905001203F1 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				403ECE6525B3391D001203F1 /* DashboardView.swift */,
+				403ECE6925B33964001203F1 /* DashboardViewModel.swift */,
+				403ECE6D25B33F5C001203F1 /* ActionCell.swift */,
+				4028DF3E25B7BB6600455EC6 /* CastleCell.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		403ECE6325B3390A001203F1 /* Outcome */ = {
+			isa = PBXGroup;
+			children = (
+				4028AFE925BC7F6200B4589A /* OutcomeViewModel.swift */,
+				4028AFEC25BC7F9700B4589A /* OutcomeView.swift */,
+			);
+			path = Outcome;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		403ECE0725B3372A001203F1 /* Castles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 403ECE1725B3372B001203F1 /* Build configuration list for PBXNativeTarget "Castles" */;
+			buildPhases = (
+				403ECE0425B3372A001203F1 /* Sources */,
+				403ECE0525B3372A001203F1 /* Frameworks */,
+				403ECE0625B3372A001203F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Castles;
+			productName = Castles;
+			productReference = 403ECE0825B3372A001203F1 /* Castles.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		403ECE0025B3372A001203F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					403ECE0725B3372A001203F1 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 403ECE0325B3372A001203F1 /* Build configuration list for PBXProject "Castles" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 403ECDFF25B3372A001203F1;
+			productRefGroup = 403ECE0925B3372A001203F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				403ECE0725B3372A001203F1 /* Castles */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		403ECE0625B3372A001203F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403ECE1325B3372B001203F1 /* Preview Assets.xcassets in Resources */,
+				403ECE1025B3372B001203F1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		403ECE0425B3372A001203F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403ECE5F25B338C8001203F1 /* KingdomService.swift in Sources */,
+				403ECE2D25B338B4001203F1 /* Outcome.swift in Sources */,
+				403ECE4E25B338C8001203F1 /* GetGoldPublisher.swift in Sources */,
+				4028AFED25BC7F9700B4589A /* OutcomeView.swift in Sources */,
+				4028DF3F25B7BB6600455EC6 /* CastleCell.swift in Sources */,
+				403ECE5925B338C8001203F1 /* TurnPresenter.swift in Sources */,
+				4028AFEA25BC7F6200B4589A /* OutcomeViewModel.swift in Sources */,
+				403ECE5425B338C8001203F1 /* GetCastles.swift in Sources */,
+				403ECE4F25B338C8001203F1 /* UseCastleItem.swift in Sources */,
+				403ECE5625B338C8001203F1 /* GetCastlesPublisher.swift in Sources */,
+				403ECE5125B338C8001203F1 /* GetTurnPublisher.swift in Sources */,
+				403ECE4B25B338C8001203F1 /* PurchaseShopItem.swift in Sources */,
+				403ECE3025B338B4001203F1 /* Turm.swift in Sources */,
+				403ECE6E25B33F5C001203F1 /* ActionCell.swift in Sources */,
+				403ECE5C25B338C8001203F1 /* ShopService.swift in Sources */,
+				403ECE5025B338C8001203F1 /* GetShopItemPublisher.swift in Sources */,
+				403ECE5725B338C8001203F1 /* CurrencyPresenter.swift in Sources */,
+				403ECE2F25B338B4001203F1 /* ShopItem.swift in Sources */,
+				403ECE5E25B338C8001203F1 /* OutcomeService.swift in Sources */,
+				403ECE5525B338C8001203F1 /* MoveToNextTurn.swift in Sources */,
+				403ECE2E25B338B4001203F1 /* Castle.swift in Sources */,
+				403ECE2C25B338B4001203F1 /* Kingdom.swift in Sources */,
+				403ECE5225B338C8001203F1 /* PerformBarbarianTurn.swift in Sources */,
+				403ECE3125B338B4001203F1 /* CastleItem.swift in Sources */,
+				403ECE5325B338C8001203F1 /* PerformPlayerTurn.swift in Sources */,
+				403ECE4C25B338C8001203F1 /* GetOutcomePublisher.swift in Sources */,
+				403ECE5D25B338C8001203F1 /* TurnService.swift in Sources */,
+				403ECE6625B3391D001203F1 /* DashboardView.swift in Sources */,
+				403ECE4D25B338C8001203F1 /* CreateCastle.swift in Sources */,
+				403ECE5825B338C8001203F1 /* CastlePresenter.swift in Sources */,
+				403ECE0C25B3372A001203F1 /* CastlesApp.swift in Sources */,
+				403ECE6A25B33964001203F1 /* DashboardViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		403ECE1525B3372B001203F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		403ECE1625B3372B001203F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		403ECE1825B3372B001203F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Castles/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Castles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingWithTom.Castles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		403ECE1925B3372B001203F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Castles/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Castles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingWithTom.Castles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		403ECE0325B3372A001203F1 /* Build configuration list for PBXProject "Castles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				403ECE1525B3372B001203F1 /* Debug */,
+				403ECE1625B3372B001203F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		403ECE1725B3372B001203F1 /* Build configuration list for PBXNativeTarget "Castles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				403ECE1825B3372B001203F1 /* Debug */,
+				403ECE1925B3372B001203F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 403ECE0025B3372A001203F1 /* Project object */;
+}
