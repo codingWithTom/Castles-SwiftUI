@@ -7,7 +7,7 @@
 
 import Foundation
 
-private enum ItemType: Int {
+private enum ItemType: Int, Codable {
   case attackItem
   case defenseItem
   case hpItem
@@ -40,9 +40,57 @@ struct ShopItem {
   }
 }
 
-//extension ShopItem: Codable {
-//  
-//}
+extension ShopItem: Codable {
+  enum CodingKeys: CodingKey {
+    case itemID, quantity, price, name, itemType, wrappedItem
+  }
+  
+  init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    self.itemID = try container.decode(String.self, forKey: CodingKeys.itemID)
+    self.quantity = try container.decode(Int.self, forKey: CodingKeys.quantity)
+    self.price = try container.decode(Int.self, forKey: CodingKeys.price)
+    self.name = try container.decode(String.self, forKey: CodingKeys.name)
+    self.type = try container.decode(ItemType.self, forKey: CodingKeys.itemType)
+    self.wrappedItem = AttackItem(attackIncrease: 0)
+    try decodeWrappedItem(with: decoder)
+  }
+  
+  private mutating func decodeWrappedItem(with decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    switch type {
+    case .attackItem:
+      self.wrappedItem = try container.decode(AttackItem.self, forKey: .wrappedItem)
+    case .defenseItem:
+      self.wrappedItem = try container.decode(DefenseItem.self, forKey: .wrappedItem)
+    case .hpItem:
+      self.wrappedItem = try container.decode(HPItem.self, forKey: .wrappedItem)
+    }
+  }
+  
+  func encode(to encoder: Encoder) throws {
+    var container = encoder.container(keyedBy: CodingKeys.self)
+    try container.encode(itemID, forKey: .itemID)
+    try container.encode(quantity, forKey: .quantity)
+    try container.encode(price, forKey: .price)
+    try container.encode(name, forKey: .name)
+    try container.encode(type, forKey: .itemType)
+    try encode(wrappedItem: wrappedItem, into: &container)
+  }
+  
+  func encode(wrappedItem item: Item, into container: inout KeyedEncodingContainer<CodingKeys>) throws {
+    switch wrappedItem {
+    case let attackItem as AttackItem:
+      try container.encode(attackItem, forKey: .wrappedItem)
+    case let defenseItem as DefenseItem:
+      try container.encode(defenseItem, forKey: .wrappedItem)
+    case let hpItem as HPItem:
+      try container.encode(hpItem, forKey: .wrappedItem)
+    default:
+      assertionFailure("Unsupported shop item!!")
+    }
+  }
+}
 
 protocol Item: Codable {
   func accept<V: ItemVisitor>(visitor: V, data: V.Data) -> V.Outcome
