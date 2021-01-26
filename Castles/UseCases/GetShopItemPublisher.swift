@@ -8,11 +8,11 @@
 import Foundation
 import Combine
 
-protocol GetshopItemPublisher {
+protocol GetShopItemPublisher {
   func execute() -> AnyPublisher<[ShopItem], Never>
 }
 
-final class GetShopItemPublisherAdapter: GetshopItemPublisher {
+final class GetShopItemPublisherAdapter: GetShopItemPublisher {
   struct Dependencies {
     var shopService: ShopService = ShopServiceAdapter.shared
   }

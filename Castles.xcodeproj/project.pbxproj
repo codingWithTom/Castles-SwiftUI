@@ -10,6 +10,10 @@
 		4028AFEA25BC7F6200B4589A /* OutcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028AFE925BC7F6200B4589A /* OutcomeViewModel.swift */; };
 		4028AFED25BC7F9700B4589A /* OutcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028AFEC25BC7F9700B4589A /* OutcomeView.swift */; };
 		4028DF3F25B7BB6600455EC6 /* CastleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028DF3E25B7BB6600455EC6 /* CastleCell.swift */; };
+		4028E0A525BC98D5005F6906 /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028E0A425BC98D5005F6906 /* ShopViewModel.swift */; };
+		4028E0A825BC9A37005F6906 /* ShopItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028E0A725BC9A37005F6906 /* ShopItemPresenter.swift */; };
+		4028E0AB25BC9AAE005F6906 /* CastleItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028E0AA25BC9AAE005F6906 /* CastleItemPresenter.swift */; };
+		4028E0AE25BC9D5E005F6906 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028E0AD25BC9D5E005F6906 /* ShopView.swift */; };
 		403ECE0C25B3372A001203F1 /* CastlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE0B25B3372A001203F1 /* CastlesApp.swift */; };
 		403ECE1025B3372B001203F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403ECE0F25B3372B001203F1 /* Assets.xcassets */; };
 		403ECE1325B3372B001203F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403ECE1225B3372B001203F1 /* Preview Assets.xcassets */; };
@@ -47,6 +51,10 @@
 		4028AFE925BC7F6200B4589A /* OutcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeViewModel.swift; sourceTree = "<group>"; };
 		4028AFEC25BC7F9700B4589A /* OutcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeView.swift; sourceTree = "<group>"; };
 		4028DF3E25B7BB6600455EC6 /* CastleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleCell.swift; sourceTree = "<group>"; };
+		4028E0A425BC98D5005F6906 /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
+		4028E0A725BC9A37005F6906 /* ShopItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemPresenter.swift; sourceTree = "<group>"; };
+		4028E0AA25BC9AAE005F6906 /* CastleItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleItemPresenter.swift; sourceTree = "<group>"; };
+		4028E0AD25BC9D5E005F6906 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		403ECE0825B3372A001203F1 /* Castles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		403ECE0B25B3372A001203F1 /* CastlesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastlesApp.swift; sourceTree = "<group>"; };
 		403ECE0F25B3372B001203F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4028E0A325BC98C1005F6906 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				4028E0A425BC98D5005F6906 /* ShopViewModel.swift */,
+				4028E0AD25BC9D5E005F6906 /* ShopView.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
 		403ECDFF25B3372A001203F1 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +188,8 @@
 				403ECE4125B338C8001203F1 /* CurrencyPresenter.swift */,
 				403ECE4225B338C8001203F1 /* CastlePresenter.swift */,
 				403ECE4325B338C8001203F1 /* TurnPresenter.swift */,
+				4028E0A725BC9A37005F6906 /* ShopItemPresenter.swift */,
+				4028E0AA25BC9AAE005F6906 /* CastleItemPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -191,6 +210,7 @@
 			children = (
 				403ECE6225B33905001203F1 /* Dashboard */,
 				403ECE6325B3390A001203F1 /* Outcome */,
+				4028E0A325BC98C1005F6906 /* Shop */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -289,6 +309,7 @@
 				403ECE4E25B338C8001203F1 /* GetGoldPublisher.swift in Sources */,
 				4028AFED25BC7F9700B4589A /* OutcomeView.swift in Sources */,
 				4028DF3F25B7BB6600455EC6 /* CastleCell.swift in Sources */,
+				4028E0A825BC9A37005F6906 /* ShopItemPresenter.swift in Sources */,
 				403ECE5925B338C8001203F1 /* TurnPresenter.swift in Sources */,
 				4028AFEA25BC7F6200B4589A /* OutcomeViewModel.swift in Sources */,
 				403ECE5425B338C8001203F1 /* GetCastles.swift in Sources */,
@@ -300,10 +321,12 @@
 				403ECE6E25B33F5C001203F1 /* ActionCell.swift in Sources */,
 				403ECE5C25B338C8001203F1 /* ShopService.swift in Sources */,
 				403ECE5025B338C8001203F1 /* GetShopItemPublisher.swift in Sources */,
+				4028E0AB25BC9AAE005F6906 /* CastleItemPresenter.swift in Sources */,
 				403ECE5725B338C8001203F1 /* CurrencyPresenter.swift in Sources */,
 				403ECE2F25B338B4001203F1 /* ShopItem.swift in Sources */,
 				403ECE5E25B338C8001203F1 /* OutcomeService.swift in Sources */,
 				403ECE5525B338C8001203F1 /* MoveToNextTurn.swift in Sources */,
+				4028E0A525BC98D5005F6906 /* ShopViewModel.swift in Sources */,
 				403ECE2E25B338B4001203F1 /* Castle.swift in Sources */,
 				403ECE2C25B338B4001203F1 /* Kingdom.swift in Sources */,
 				403ECE5225B338C8001203F1 /* PerformBarbarianTurn.swift in Sources */,
@@ -311,6 +334,7 @@
 				403ECE5325B338C8001203F1 /* PerformPlayerTurn.swift in Sources */,
 				403ECE4C25B338C8001203F1 /* GetOutcomePublisher.swift in Sources */,
 				403ECE5D25B338C8001203F1 /* TurnService.swift in Sources */,
+				4028E0AE25BC9D5E005F6906 /* ShopView.swift in Sources */,
 				403ECE6625B3391D001203F1 /* DashboardView.swift in Sources */,
 				403ECE4D25B338C8001203F1 /* CreateCastle.swift in Sources */,
 				403ECE5825B338C8001203F1 /* CastlePresenter.swift in Sources */,

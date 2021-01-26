@@ -23,13 +23,17 @@ private enum DashboardState {
   }
 }
 
+enum DashboardSheet {
+  case shop, outcome
+}
+
 struct DashboardView: View {
   @ObservedObject private var viewModel = DashboardViewModel()
   
   @Environment(\.verticalSizeClass) private var verticalSizeClass
   private var topBarHeight: CGFloat { return 50 }
   @State private var state: DashboardState = .waitingForPlayer
-  @State private var isPresentingOutcome = false
+  @State private var isPresentingSheet = false
   @State private var outcome: Outcome?
   
   var gridItems: [GridItem] {
@@ -50,7 +54,10 @@ struct DashboardView: View {
       }
       .toolbar {
         ToolbarItem(placement: .bottomBar) {
-          Button(action: { print("Tapped shop") } , label: {
+          Button(action: {
+            self.viewModel.tappedShop()
+            self.isPresentingSheet.toggle()
+          } , label: {
             Text("Shop")
           })
         }
@@ -63,14 +70,20 @@ struct DashboardView: View {
       state = firstTurn.isPlayerTurn ? .waitingForPlayer : .waitingForBarbarian
     })
     .onReceive(viewModel.$outcome, perform: {
-      self.outcome = $0
-      self.isPresentingOutcome = $0 != nil
+      guard let outcome = $0 else { return }
+      self.outcome = outcome
+      self.isPresentingSheet = true
     })
-    .sheet(isPresented: $isPresentingOutcome, content: {
-      if let outcome = self.outcome {
-        OutcomeView(outcome: outcome, isPresented: $isPresentingOutcome)
-      } else {
-        EmptyView()
+    .sheet(isPresented: $isPresentingSheet, content: {
+      switch viewModel.dashboardSheet {
+      case .shop:
+        ShopView(isPresenting: $isPresentingSheet)
+      case .outcome:
+        if let outcome = self.outcome {
+          OutcomeView(outcome: outcome, isPresented: $isPresentingSheet)
+        } else {
+          EmptyView()
+        }
       }
     })
   }

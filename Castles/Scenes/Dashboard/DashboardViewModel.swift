@@ -60,6 +60,7 @@ final class DashboardViewModel: ObservableObject {
   @Published var items: [DashboardItem] = []
   @Published var outcome: Outcome?
   @Published var turns: [TurnViewModel] = []
+  @Published var dashboardSheet: DashboardSheet = .outcome
   private var goldSubscriber: AnyCancellable?
   private var castlesSubscriber: AnyCancellable?
   private var turnSubscriber: AnyCancellable?
@@ -88,6 +89,10 @@ final class DashboardViewModel: ObservableObject {
   func userSelectedNextTurn() {
     dependencies.performBarbarianTurn.execute()
   }
+  
+  func tappedShop() {
+    dashboardSheet = .shop
+  }
 }
 
 private extension DashboardViewModel {
@@ -105,8 +110,8 @@ private extension DashboardViewModel {
       self?.turns = turns.map { TurnPresenter.turnViewModel(from: $0) }
     }
     outcomeSubscirber = dependencies.getOutcomePublisher.execute().receive(on: RunLoop.main).sink { [weak self] in
+      self?.dashboardSheet = .outcome
       self?.outcome = $0
-      
     }
   }
 }
