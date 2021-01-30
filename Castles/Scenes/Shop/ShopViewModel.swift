@@ -31,6 +31,7 @@ final class ShopViewModel: ObservableObject {
     return dependencies.getCastles.execute().map { $0.name }
   }
   @Published var items: [ShopItemViewModel] = []
+  @Published var errorMessage: ErrorMessageViewModel?
   private var shopItems: [ShopItem] = [] {
     didSet {
       let shopItemPresenter = ShopItemPresenter()
@@ -54,8 +55,11 @@ final class ShopViewModel: ObservableObject {
       let castleItem = item.wrappedItem as? CastleItem
     else { return }
     let castle = dependencies.getCastles.execute()[castleIndex]
-    dependencies.purchaseShopItem.execute(item: item)
-    dependencies.useCastleItem.execute(item: castleItem, castle: castle)
+    if case let .failure(error) = dependencies.purchaseShopItem.execute(item: item) {
+      errorMessage = ErrorPresenter.viewModel(for: error)
+    } else {
+      dependencies.useCastleItem.execute(item: castleItem, castle: castle)
+    }
   }
 }
 

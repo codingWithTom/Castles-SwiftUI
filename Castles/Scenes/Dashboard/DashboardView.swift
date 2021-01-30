@@ -34,6 +34,7 @@ struct DashboardView: View {
   private var topBarHeight: CGFloat { return 50 }
   @State private var state: DashboardState = .waitingForPlayer
   @State private var isPresentingSheet = false
+  @State private var isPresentingErrorAlert = false
   @State private var outcome: Outcome?
   
   var gridItems: [GridItem] {
@@ -74,6 +75,9 @@ struct DashboardView: View {
       self.outcome = outcome
       self.isPresentingSheet = true
     })
+    .onReceive(viewModel.$errorMessage, perform: {
+      self.isPresentingErrorAlert = $0 != nil
+    })
     .sheet(isPresented: $isPresentingSheet, content: {
       switch viewModel.dashboardSheet {
       case .shop:
@@ -85,6 +89,11 @@ struct DashboardView: View {
           EmptyView()
         }
       }
+    })
+    .alert(isPresented: $isPresentingErrorAlert, content: {
+      Alert(title: Text(viewModel.errorMessage?.title ?? ""),
+            message: Text(viewModel.errorMessage?.message ?? ""),
+            dismissButton: .default(Text("OK")))
     })
   }
   
