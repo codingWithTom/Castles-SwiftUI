@@ -15,6 +15,7 @@ struct ShopItemViewModel {
   let price: String
   let imageName: String
   let isIcon: Bool
+  let isAvailable: Bool
 }
 
 final class ShopViewModel: ObservableObject {

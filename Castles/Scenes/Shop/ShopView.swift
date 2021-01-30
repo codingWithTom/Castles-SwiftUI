@@ -95,6 +95,7 @@ private struct ShopItemView: View {
           .resizable()
           .aspectRatio(contentMode: .fit)
           .foregroundColor(.blue)
+          .blur(radius: viewModel.isAvailable ? 0.0 : 10)
         Text(viewModel.name)
           .font(.title)
         Spacer()
