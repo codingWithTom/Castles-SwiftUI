@@ -13,6 +13,7 @@ struct ShopView: View {
   @Binding var isPresenting: Bool
   @State private var isPresentingCastleOptions: Bool = false
   @State private var selectedItemID: String?
+  @State private var isPresentingErrorAlert = false
   
   var gridItems: [GridItem] {
     if verticalSizeClass == .regular {
@@ -72,7 +73,15 @@ struct ShopView: View {
                               Image(systemName: "xmark")
                             })
       )
+      .alert(isPresented: $isPresentingErrorAlert, content: {
+        Alert(title: Text(viewModel.errorMessage?.title ?? ""),
+              message: Text(viewModel.errorMessage?.message ?? ""),
+              dismissButton: .default(Text("Continue Shopping")))
+      })
     }
+    .onReceive(viewModel.$errorMessage, perform: {
+      self.isPresentingErrorAlert = $0 != nil
+    })
   }
 }
 
@@ -86,6 +95,7 @@ private struct ShopItemView: View {
           .resizable()
           .aspectRatio(contentMode: .fit)
           .foregroundColor(.blue)
+          .blur(radius: viewModel.isAvailable ? 0.0 : 10)
         Text(viewModel.name)
           .font(.title)
         Spacer()

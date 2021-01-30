@@ -45,6 +45,8 @@
 		403ECE6625B3391D001203F1 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE6525B3391D001203F1 /* DashboardView.swift */; };
 		403ECE6A25B33964001203F1 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE6925B33964001203F1 /* DashboardViewModel.swift */; };
 		403ECE6E25B33F5C001203F1 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE6D25B33F5C001203F1 /* ActionCell.swift */; };
+		404BFB0D25C3A02400342556 /* CastlesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BFB0C25C3A02400342556 /* CastlesError.swift */; };
+		404BFB1025C3A11C00342556 /* ErrorMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BFB0F25C3A11C00342556 /* ErrorMessageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		403ECE6525B3391D001203F1 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		403ECE6925B33964001203F1 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		403ECE6D25B33F5C001203F1 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
+		404BFB0C25C3A02400342556 /* CastlesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastlesError.swift; sourceTree = "<group>"; };
+		404BFB0F25C3A11C00342556 /* ErrorMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 				403ECE4325B338C8001203F1 /* TurnPresenter.swift */,
 				4028E0A725BC9A37005F6906 /* ShopItemPresenter.swift */,
 				4028E0AA25BC9AAE005F6906 /* CastleItemPresenter.swift */,
+				404BFB0F25C3A11C00342556 /* ErrorMessageViewModel.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				403ECE4A25B338C8001203F1 /* KingdomService.swift */,
+				404BFB0C25C3A02400342556 /* CastlesError.swift */,
 				403ECE4925B338C8001203F1 /* OutcomeService.swift */,
 				403ECE4725B338C8001203F1 /* ShopService.swift */,
 				403ECE4825B338C8001203F1 /* TurnService.swift */,
@@ -323,6 +329,7 @@
 				403ECE5025B338C8001203F1 /* GetShopItemPublisher.swift in Sources */,
 				4028E0AB25BC9AAE005F6906 /* CastleItemPresenter.swift in Sources */,
 				403ECE5725B338C8001203F1 /* CurrencyPresenter.swift in Sources */,
+				404BFB0D25C3A02400342556 /* CastlesError.swift in Sources */,
 				403ECE2F25B338B4001203F1 /* ShopItem.swift in Sources */,
 				403ECE5E25B338C8001203F1 /* OutcomeService.swift in Sources */,
 				403ECE5525B338C8001203F1 /* MoveToNextTurn.swift in Sources */,
@@ -334,6 +341,7 @@
 				403ECE5325B338C8001203F1 /* PerformPlayerTurn.swift in Sources */,
 				403ECE4C25B338C8001203F1 /* GetOutcomePublisher.swift in Sources */,
 				403ECE5D25B338C8001203F1 /* TurnService.swift in Sources */,
+				404BFB1025C3A11C00342556 /* ErrorMessageViewModel.swift in Sources */,
 				4028E0AE25BC9D5E005F6906 /* ShopView.swift in Sources */,
 				403ECE6625B3391D001203F1 /* DashboardView.swift in Sources */,
 				403ECE4D25B338C8001203F1 /* CreateCastle.swift in Sources */,

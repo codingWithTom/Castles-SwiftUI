@@ -16,16 +16,16 @@ final class CastleItemPresenter {
 extension CastleItemPresenter: CastleItemVisitor {
   func visit(attackItem: AttackItem, data shopItem: ShopItem) -> ShopItemViewModel {
     return ShopItemViewModel(itemID: shopItem.itemID, name: shopItem.name, quantity: "\(shopItem.quantity)",
-                             price: CurrencyPresenter.goldString(shopItem.price), imageName: "sword", isIcon: false)
+                             price: CurrencyPresenter.goldString(shopItem.price), imageName: "sword", isIcon: false, isAvailable: shopItem.quantity > 0)
   }
   
   func visit(defenseItem: DefenseItem, data shopItem: ShopItem) -> ShopItemViewModel {
     return ShopItemViewModel(itemID: shopItem.itemID, name: shopItem.name, quantity: "\(shopItem.quantity)",
-                             price: CurrencyPresenter.goldString(shopItem.price), imageName: "shield", isIcon: false)
+                             price: CurrencyPresenter.goldString(shopItem.price), imageName: "shield", isIcon: false, isAvailable: shopItem.quantity > 0)
   }
   
   func visit(hpItem: HPItem, data shopItem: ShopItem) -> ShopItemViewModel {
     return ShopItemViewModel(itemID: shopItem.itemID, name: shopItem.name, quantity: "\(shopItem.quantity)",
-                             price: CurrencyPresenter.goldString(shopItem.price), imageName: "suit.heart.fill", isIcon: true)
+                             price: CurrencyPresenter.goldString(shopItem.price), imageName: "suit.heart.fill", isIcon: true, isAvailable: shopItem.quantity > 0)
   }
 }

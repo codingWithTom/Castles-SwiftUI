@@ -61,6 +61,7 @@ final class DashboardViewModel: ObservableObject {
   @Published var outcome: Outcome?
   @Published var turns: [TurnViewModel] = []
   @Published var dashboardSheet: DashboardSheet = .outcome
+  @Published var errorMessage: ErrorMessageViewModel?
   private var goldSubscriber: AnyCancellable?
   private var castlesSubscriber: AnyCancellable?
   private var turnSubscriber: AnyCancellable?
@@ -75,7 +76,9 @@ final class DashboardViewModel: ObservableObject {
   }
   
   func userDidTapAddCastle() {
-    dependencies.createCastle.execute()
+    if case let .failure(error) = dependencies.createCastle.execute() {
+      errorMessage = ErrorPresenter.viewModel(for: error)
+    }
   }
   
   func userSelectedCastleForAttack(castleID: String) {
