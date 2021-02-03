@@ -10,12 +10,18 @@ import Combine
 import SwiftUI
 
 struct CastleViewModel: Identifiable {
+  enum Condition {
+    case onFire
+    case normal
+    case perfect
+  }
   let id: String
   let name: String
   let imageName: String
   let attack: String
   let defense: String
   let hp: String
+  let condition: Condition
 }
 
 struct TurnViewModel {

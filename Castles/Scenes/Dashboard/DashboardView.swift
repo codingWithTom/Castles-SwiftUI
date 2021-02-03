@@ -39,7 +39,7 @@ struct DashboardView: View {
   
   var gridItems: [GridItem] {
     if verticalSizeClass == .regular {
-      return Array(repeating: GridItem(.flexible(minimum: 200)), count: 2)
+      return Array(repeating: GridItem(.flexible(minimum: 250)), count: 2)
     } else {
       return [GridItem(.flexible(minimum: 220))]
     }
