@@ -47,6 +47,11 @@
 		403ECE6E25B33F5C001203F1 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE6D25B33F5C001203F1 /* ActionCell.swift */; };
 		404BFB0D25C3A02400342556 /* CastlesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BFB0C25C3A02400342556 /* CastlesError.swift */; };
 		404BFB1025C3A11C00342556 /* ErrorMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BFB0F25C3A11C00342556 /* ErrorMessageViewModel.swift */; };
+		4069D20225C706E700375502 /* CastleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069D20125C706E700375502 /* CastleEffect.swift */; };
+		4069D20725C7075200375502 /* CastleFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4069D20525C7075100375502 /* CastleFire.sks */; };
+		4069D20825C7075200375502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4069D20625C7075200375502 /* Assets.xcassets */; };
+		4069D20B25C707F500375502 /* SparklingCastle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4069D20A25C707F500375502 /* SparklingCastle.sks */; };
+		4069D20F25C7086300375502 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4069D20E25C7086300375502 /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +97,11 @@
 		403ECE6D25B33F5C001203F1 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
 		404BFB0C25C3A02400342556 /* CastlesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastlesError.swift; sourceTree = "<group>"; };
 		404BFB0F25C3A11C00342556 /* ErrorMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageViewModel.swift; sourceTree = "<group>"; };
+		4069D20125C706E700375502 /* CastleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleEffect.swift; sourceTree = "<group>"; };
+		4069D20525C7075100375502 /* CastleFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CastleFire.sks; sourceTree = "<group>"; };
+		4069D20625C7075200375502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4069D20A25C707F500375502 /* SparklingCastle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparklingCastle.sks; sourceTree = "<group>"; };
+		4069D20E25C7086300375502 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4069D20F25C7086300375502 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +130,7 @@
 			children = (
 				403ECE0A25B3372A001203F1 /* Castles */,
 				403ECE0925B3372A001203F1 /* Products */,
+				4069D20D25C7086300375502 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,9 +149,11 @@
 				403ECE4625B338C8001203F1 /* Services */,
 				403ECE3325B338C8001203F1 /* UseCases */,
 				403ECE4025B338C8001203F1 /* Presenter */,
+				4069D20025C706D800375502 /* Presentation */,
 				403ECE6125B338F9001203F1 /* Scenes */,
 				403ECE0B25B3372A001203F1 /* CastlesApp.swift */,
 				403ECE0F25B3372B001203F1 /* Assets.xcassets */,
+				4069D20425C7073D00375502 /* ParticleEffects */,
 				403ECE1425B3372B001203F1 /* Info.plist */,
 				403ECE1125B3372B001203F1 /* Preview Content */,
 			);
@@ -241,6 +255,32 @@
 			path = Outcome;
 			sourceTree = "<group>";
 		};
+		4069D20025C706D800375502 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4069D20125C706E700375502 /* CastleEffect.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4069D20425C7073D00375502 /* ParticleEffects */ = {
+			isa = PBXGroup;
+			children = (
+				4069D20525C7075100375502 /* CastleFire.sks */,
+				4069D20A25C707F500375502 /* SparklingCastle.sks */,
+				4069D20625C7075200375502 /* Assets.xcassets */,
+			);
+			path = ParticleEffects;
+			sourceTree = "<group>";
+		};
+		4069D20D25C7086300375502 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4069D20E25C7086300375502 /* SpriteKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				403ECE1325B3372B001203F1 /* Preview Assets.xcassets in Resources */,
+				4069D20725C7075200375502 /* CastleFire.sks in Resources */,
+				4069D20B25C707F500375502 /* SparklingCastle.sks in Resources */,
+				4069D20825C7075200375502 /* Assets.xcassets in Resources */,
 				403ECE1025B3372B001203F1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				403ECE5F25B338C8001203F1 /* KingdomService.swift in Sources */,
+				4069D20225C706E700375502 /* CastleEffect.swift in Sources */,
 				403ECE2D25B338B4001203F1 /* Outcome.swift in Sources */,
 				403ECE4E25B338C8001203F1 /* GetGoldPublisher.swift in Sources */,
 				4028AFED25BC7F9700B4589A /* OutcomeView.swift in Sources */,
