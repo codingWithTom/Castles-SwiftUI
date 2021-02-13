@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ActionCell: View {
   let viewModel: ActionViewModel
-  @State private var showingProgressView: Bool = false
   
   var image: Image {
     viewModel.isIcon ? Image(systemName: viewModel.imageName) : Image(viewModel.imageName)
@@ -17,12 +16,11 @@ struct ActionCell: View {
   
   init(viewModel: ActionViewModel) {
     self.viewModel = viewModel
-    self.showingProgressView = viewModel.startDate != nil
   }
   
   var progressView: some View {
     ProgressView(startDate: viewModel.startDate ?? Date(),
-                 endDate: viewModel.endDate ?? Date(), showingProgressView: $showingProgressView)
+                 endDate: viewModel.endDate ?? Date())
   }
   
   var body: some View {
@@ -44,7 +42,7 @@ struct ActionCell: View {
               .layoutPriority(-1)
           }
       }
-      if showingProgressView {
+      if viewModel.startDate != nil {
         progressView
       }
     }

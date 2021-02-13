@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ProgressViewModel {
+final class ProgressViewModel: ObservableObject {
   private let startDate: Date
   private let endDate: Date
   private var timer: Timer?
