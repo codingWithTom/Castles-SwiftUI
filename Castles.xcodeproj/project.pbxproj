@@ -45,6 +45,13 @@
 		403ECE6625B3391D001203F1 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE6525B3391D001203F1 /* DashboardView.swift */; };
 		403ECE6A25B33964001203F1 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE6925B33964001203F1 /* DashboardViewModel.swift */; };
 		403ECE6E25B33F5C001203F1 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE6D25B33F5C001203F1 /* ActionCell.swift */; };
+		4045221A25D61471007C3C26 /* Perk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045221925D61471007C3C26 /* Perk.swift */; };
+		4045221E25D614E0007C3C26 /* PerkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045221D25D614E0007C3C26 /* PerkService.swift */; };
+		4045222125D616BE007C3C26 /* GetPerksPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045222025D616BE007C3C26 /* GetPerksPublisher.swift */; };
+		4045222425D61708007C3C26 /* UsePerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045222325D61708007C3C26 /* UsePerk.swift */; };
+		4045222825D61B13007C3C26 /* PerkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045222725D61B13007C3C26 /* PerkPresenter.swift */; };
+		4045222C25D61E54007C3C26 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045222B25D61E54007C3C26 /* ProgressView.swift */; };
+		4045223025D61E80007C3C26 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045222F25D61E80007C3C26 /* ProgressViewModel.swift */; };
 		404BFB0D25C3A02400342556 /* CastlesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BFB0C25C3A02400342556 /* CastlesError.swift */; };
 		404BFB1025C3A11C00342556 /* ErrorMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BFB0F25C3A11C00342556 /* ErrorMessageViewModel.swift */; };
 		4069D20225C706E700375502 /* CastleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069D20125C706E700375502 /* CastleEffect.swift */; };
@@ -95,6 +102,13 @@
 		403ECE6525B3391D001203F1 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		403ECE6925B33964001203F1 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		403ECE6D25B33F5C001203F1 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
+		4045221925D61471007C3C26 /* Perk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perk.swift; sourceTree = "<group>"; };
+		4045221D25D614E0007C3C26 /* PerkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkService.swift; sourceTree = "<group>"; };
+		4045222025D616BE007C3C26 /* GetPerksPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPerksPublisher.swift; sourceTree = "<group>"; };
+		4045222325D61708007C3C26 /* UsePerk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsePerk.swift; sourceTree = "<group>"; };
+		4045222725D61B13007C3C26 /* PerkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkPresenter.swift; sourceTree = "<group>"; };
+		4045222B25D61E54007C3C26 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		4045222F25D61E80007C3C26 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
 		404BFB0C25C3A02400342556 /* CastlesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastlesError.swift; sourceTree = "<group>"; };
 		404BFB0F25C3A11C00342556 /* ErrorMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageViewModel.swift; sourceTree = "<group>"; };
 		4069D20125C706E700375502 /* CastleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleEffect.swift; sourceTree = "<group>"; };
@@ -150,6 +164,7 @@
 				403ECE3325B338C8001203F1 /* UseCases */,
 				403ECE4025B338C8001203F1 /* Presenter */,
 				4069D20025C706D800375502 /* Presentation */,
+				4045222A25D61E44007C3C26 /* Views */,
 				403ECE6125B338F9001203F1 /* Scenes */,
 				403ECE0B25B3372A001203F1 /* CastlesApp.swift */,
 				403ECE0F25B3372B001203F1 /* Assets.xcassets */,
@@ -177,6 +192,7 @@
 				403ECE2A25B338B4001203F1 /* Turm.swift */,
 				403ECE2925B338B4001203F1 /* ShopItem.swift */,
 				403ECE2B25B338B4001203F1 /* CastleItem.swift */,
+				4045221925D61471007C3C26 /* Perk.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +205,7 @@
 				403ECE3F25B338C8001203F1 /* GetCastlesPublisher.swift */,
 				403ECE3725B338C8001203F1 /* GetGoldPublisher.swift */,
 				403ECE3525B338C8001203F1 /* GetOutcomePublisher.swift */,
+				4045222025D616BE007C3C26 /* GetPerksPublisher.swift */,
 				403ECE3925B338C8001203F1 /* GetShopItemPublisher.swift */,
 				403ECE3A25B338C8001203F1 /* GetTurnPublisher.swift */,
 				403ECE3E25B338C8001203F1 /* MoveToNextTurn.swift */,
@@ -196,6 +213,7 @@
 				403ECE3C25B338C8001203F1 /* PerformPlayerTurn.swift */,
 				403ECE3425B338C8001203F1 /* PurchaseShopItem.swift */,
 				403ECE3825B338C8001203F1 /* UseCastleItem.swift */,
+				4045222325D61708007C3C26 /* UsePerk.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -209,6 +227,7 @@
 				4028E0A725BC9A37005F6906 /* ShopItemPresenter.swift */,
 				4028E0AA25BC9AAE005F6906 /* CastleItemPresenter.swift */,
 				404BFB0F25C3A11C00342556 /* ErrorMessageViewModel.swift */,
+				4045222725D61B13007C3C26 /* PerkPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -221,6 +240,7 @@
 				403ECE4925B338C8001203F1 /* OutcomeService.swift */,
 				403ECE4725B338C8001203F1 /* ShopService.swift */,
 				403ECE4825B338C8001203F1 /* TurnService.swift */,
+				4045221D25D614E0007C3C26 /* PerkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -253,6 +273,23 @@
 				4028AFEC25BC7F9700B4589A /* OutcomeView.swift */,
 			);
 			path = Outcome;
+			sourceTree = "<group>";
+		};
+		4045222A25D61E44007C3C26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4045222E25D61E70007C3C26 /* ProgressView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4045222E25D61E70007C3C26 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				4045222B25D61E54007C3C26 /* ProgressView.swift */,
+				4045222F25D61E80007C3C26 /* ProgressViewModel.swift */,
+			);
+			path = ProgressView;
 			sourceTree = "<group>";
 		};
 		4069D20025C706D800375502 /* Presentation */ = {
@@ -366,26 +403,33 @@
 				403ECE4F25B338C8001203F1 /* UseCastleItem.swift in Sources */,
 				403ECE5625B338C8001203F1 /* GetCastlesPublisher.swift in Sources */,
 				403ECE5125B338C8001203F1 /* GetTurnPublisher.swift in Sources */,
+				4045221E25D614E0007C3C26 /* PerkService.swift in Sources */,
 				403ECE4B25B338C8001203F1 /* PurchaseShopItem.swift in Sources */,
 				403ECE3025B338B4001203F1 /* Turm.swift in Sources */,
 				403ECE6E25B33F5C001203F1 /* ActionCell.swift in Sources */,
+				4045222C25D61E54007C3C26 /* ProgressView.swift in Sources */,
 				403ECE5C25B338C8001203F1 /* ShopService.swift in Sources */,
 				403ECE5025B338C8001203F1 /* GetShopItemPublisher.swift in Sources */,
 				4028E0AB25BC9AAE005F6906 /* CastleItemPresenter.swift in Sources */,
+				4045222825D61B13007C3C26 /* PerkPresenter.swift in Sources */,
 				403ECE5725B338C8001203F1 /* CurrencyPresenter.swift in Sources */,
 				404BFB0D25C3A02400342556 /* CastlesError.swift in Sources */,
 				403ECE2F25B338B4001203F1 /* ShopItem.swift in Sources */,
 				403ECE5E25B338C8001203F1 /* OutcomeService.swift in Sources */,
+				4045221A25D61471007C3C26 /* Perk.swift in Sources */,
 				403ECE5525B338C8001203F1 /* MoveToNextTurn.swift in Sources */,
 				4028E0A525BC98D5005F6906 /* ShopViewModel.swift in Sources */,
 				403ECE2E25B338B4001203F1 /* Castle.swift in Sources */,
+				4045222425D61708007C3C26 /* UsePerk.swift in Sources */,
 				403ECE2C25B338B4001203F1 /* Kingdom.swift in Sources */,
+				4045222125D616BE007C3C26 /* GetPerksPublisher.swift in Sources */,
 				403ECE5225B338C8001203F1 /* PerformBarbarianTurn.swift in Sources */,
 				403ECE3125B338B4001203F1 /* CastleItem.swift in Sources */,
 				403ECE5325B338C8001203F1 /* PerformPlayerTurn.swift in Sources */,
 				403ECE4C25B338C8001203F1 /* GetOutcomePublisher.swift in Sources */,
 				403ECE5D25B338C8001203F1 /* TurnService.swift in Sources */,
 				404BFB1025C3A11C00342556 /* ErrorMessageViewModel.swift in Sources */,
+				4045223025D61E80007C3C26 /* ProgressViewModel.swift in Sources */,
 				4028E0AE25BC9D5E005F6906 /* ShopView.swift in Sources */,
 				403ECE6625B3391D001203F1 /* DashboardView.swift in Sources */,
 				403ECE4D25B338C8001203F1 /* CreateCastle.swift in Sources */,

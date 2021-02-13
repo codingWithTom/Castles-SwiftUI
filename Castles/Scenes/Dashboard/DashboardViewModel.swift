@@ -44,10 +44,14 @@ enum DashboardItem: Identifiable {
 }
 
 struct ActionViewModel: Identifiable {
-  var id: String { imageName }
-  let price: String
+  let id: String
+  let value: String
   let name: String
   let imageName: String
+  let isIcon: Bool
+  let effectImageName: String
+  let startDate: Date?
+  let endDate: Date?
 }
 
 
@@ -60,31 +64,23 @@ final class DashboardViewModel: ObservableObject {
     var createCastle: CreateCastle = CreateCastleAdapter()
     var performPlayerTurn: PerformPlayerTurn = PerformPlayerTurnAdapter()
     var performBarbarianTurn: PerformBarbarianTurn = PerformBarbarianTurnAdapter()
+    var getPerkPublisher: GetPerksPublisher = GetPerksPublisherAdapter()
+    var usePerk: UsePerk = UsePerkAdapter()
   }
   private let dependencies: Dependencies
   @Published var goldAmount: String = "0"
   @Published var items: [DashboardItem] = []
+  @Published var actionItems: [DashboardItem] = []
   @Published var outcome: Outcome?
   @Published var turns: [TurnViewModel] = []
   @Published var dashboardSheet: DashboardSheet = .outcome
   @Published var errorMessage: ErrorMessageViewModel?
-  private var goldSubscriber: AnyCancellable?
-  private var castlesSubscriber: AnyCancellable?
-  private var turnSubscriber: AnyCancellable?
-  private var outcomeSubscirber: AnyCancellable?
-  private let actionItems: [DashboardItem] = [
-    DashboardItem.action(ActionViewModel(price: "1,000", name: "Add Castle", imageName: "plus.circle"))
-  ]
+  private var subscriptions = Set<AnyCancellable>()
+  private var perks: [Perk] = []
   
   init(dependencies: Dependencies = .init()) {
     self.dependencies = dependencies
     observe()
-  }
-  
-  func userDidTapAddCastle() {
-    if case let .failure(error) = dependencies.createCastle.execute() {
-      errorMessage = ErrorPresenter.viewModel(for: error)
-    }
   }
   
   func userSelectedCastleForAttack(castleID: String) {
@@ -102,25 +98,53 @@ final class DashboardViewModel: ObservableObject {
   func tappedShop() {
     dashboardSheet = .shop
   }
+  
+  func tappedAction(withID id: String) {
+    guard let index = actionItems.firstIndex(where: { $0.id == id }) else { return }
+    if index == 0 {
+      userDidTapAddCastle()
+    } else {
+      userDidUsePerk(at: index - 1)
+    }
+  }
 }
 
 private extension DashboardViewModel {
   func observe() {
-    goldSubscriber = dependencies.getGoldPublisher.execute().receive(on: RunLoop.main).sink { [weak self] in
+    dependencies.getGoldPublisher.execute().receive(on: RunLoop.main).sink { [weak self] in
       self?.goldAmount = CurrencyPresenter.goldString($0)
-    }
-    castlesSubscriber = dependencies.getCastlePublisher.execute().receive(on: RunLoop.main).sink { [weak self] castles in
+    }.store(in: &subscriptions)
+    dependencies.getCastlePublisher.execute().receive(on: RunLoop.main).sink { [weak self] castles in
       guard let self = self else { return }
       withAnimation {
-        self.items = castles.map { DashboardItem.castle(CastlePresenter.castleViewModel(from: $0)) } + self.actionItems
+        self.items = castles.map { DashboardItem.castle(CastlePresenter.castleViewModel(from: $0)) }
       }
-    }
-    turnSubscriber = dependencies.getTurnPublisher.execute().receive(on: RunLoop.main).sink { [weak self] turns in
+    }.store(in: &subscriptions)
+    dependencies.getTurnPublisher.execute().receive(on: RunLoop.main).sink { [weak self] turns in
       self?.turns = turns.map { TurnPresenter.turnViewModel(from: $0) }
-    }
-    outcomeSubscirber = dependencies.getOutcomePublisher.execute().receive(on: RunLoop.main).sink { [weak self] in
+    }.store(in: &subscriptions)
+    dependencies.getOutcomePublisher.execute().receive(on: RunLoop.main).sink { [weak self] in
       self?.dashboardSheet = .outcome
       self?.outcome = $0
+    }.store(in: &subscriptions)
+    dependencies.getPerkPublisher.execute().receive(on: RunLoop.main).sink { [weak self] perks in
+      self?.perks = perks
+      self?.actionItems =
+        [DashboardItem.action(ActionViewModel(id: "addCastleAction", value: "- 1,000", name: "Add Castle", imageName: "plus.circle",
+                                             isIcon: true, effectImageName: "gold", startDate: nil, endDate: nil))]
+        + perks.map { DashboardItem.action(PerkPresenter.viewModel(for: $0)) }
+    }.store(in: &subscriptions)
+  }
+  
+  func userDidTapAddCastle() {
+    if case let .failure(error) = dependencies.createCastle.execute() {
+      errorMessage = ErrorPresenter.viewModel(for: error)
     }
+  }
+  
+  func userDidUsePerk(at index: Int) {
+    let perk = perks[index]
+    guard perk.isCooldownPassed else { return }
+    dependencies.usePerk.execute(perk: perk)
   }
 }

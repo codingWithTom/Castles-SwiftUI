@@ -103,13 +103,14 @@ struct DashboardView: View {
         .frame(height: topBarHeight)
       ScrollView(.horizontal) {
         LazyHGrid(rows: gridItems) {
-          ForEach(viewModel.items) { cell in
+          ForEach(viewModel.items + viewModel.actionItems) { cell in
             switch cell {
             case .action(let actionViewModel):
               ActionCell(viewModel: actionViewModel)
                 .onTapGesture {
-                  viewModel.userDidTapAddCastle()
+                  viewModel.tappedAction(withID: actionViewModel.id)
                 }
+                .padding(.horizontal)
             case .castle(let castleViewModel):
               CastleCell(viewModel: castleViewModel)
                 .onTapGesture {
