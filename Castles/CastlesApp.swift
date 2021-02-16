@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CastlesApp: App {
-    var body: some Scene {
-        WindowGroup {
-            DashboardView()
-        }
+  private let viewModel = CastlesAppViewModel()
+  
+  var body: some Scene {
+    WindowGroup {
+      DashboardView()
     }
+  }
 }

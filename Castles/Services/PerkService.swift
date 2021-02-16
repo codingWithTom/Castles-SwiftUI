@@ -55,8 +55,8 @@ private extension PerkServiceAdapter {
       self.perks = perks
     } else {
       self.perks = [
-        Perk(name: "Harvest", value: 300, imageName: "plant", type: .gold, cooldownTime: 20, lastUsedDate: Date()),
-        Perk(name: "Smith", value: 20, imageName: "anvil", type: .attack, cooldownTime: 40, lastUsedDate: Date())
+        Perk(name: "Harvest", value: 300, imageName: "plant", type: .gold, cooldownTime: 5, lastUsedDate: Date()),
+        Perk(name: "Smith", value: 20, imageName: "anvil", type: .attack, cooldownTime: 20, lastUsedDate: Date())
       ]
     }
   }
