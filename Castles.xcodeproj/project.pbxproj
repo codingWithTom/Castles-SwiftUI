@@ -54,6 +54,11 @@
 		4045223025D61E80007C3C26 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045222F25D61E80007C3C26 /* ProgressViewModel.swift */; };
 		404BFB0D25C3A02400342556 /* CastlesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BFB0C25C3A02400342556 /* CastlesError.swift */; };
 		404BFB1025C3A11C00342556 /* ErrorMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BFB0F25C3A11C00342556 /* ErrorMessageViewModel.swift */; };
+		4050567D25DACB0D00CA7639 /* PerkNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050567C25DACB0D00CA7639 /* PerkNotificationService.swift */; };
+		4050568025DACD0A00CA7639 /* GetPerkNotificationActionPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050567F25DACD0A00CA7639 /* GetPerkNotificationActionPublisher.swift */; };
+		4050568325DACD6D00CA7639 /* ScheduleNotificationForPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050568225DACD6D00CA7639 /* ScheduleNotificationForPerk.swift */; };
+		4050568825DAD3B600CA7639 /* SyncPerkNotificationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050568725DAD3B600CA7639 /* SyncPerkNotificationActions.swift */; };
+		4050568B25DAD49E00CA7639 /* CastlesAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050568A25DAD49E00CA7639 /* CastlesAppViewModel.swift */; };
 		4069D20225C706E700375502 /* CastleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069D20125C706E700375502 /* CastleEffect.swift */; };
 		4069D20725C7075200375502 /* CastleFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4069D20525C7075100375502 /* CastleFire.sks */; };
 		4069D20825C7075200375502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4069D20625C7075200375502 /* Assets.xcassets */; };
@@ -111,6 +116,11 @@
 		4045222F25D61E80007C3C26 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
 		404BFB0C25C3A02400342556 /* CastlesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastlesError.swift; sourceTree = "<group>"; };
 		404BFB0F25C3A11C00342556 /* ErrorMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageViewModel.swift; sourceTree = "<group>"; };
+		4050567C25DACB0D00CA7639 /* PerkNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkNotificationService.swift; sourceTree = "<group>"; };
+		4050567F25DACD0A00CA7639 /* GetPerkNotificationActionPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPerkNotificationActionPublisher.swift; sourceTree = "<group>"; };
+		4050568225DACD6D00CA7639 /* ScheduleNotificationForPerk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNotificationForPerk.swift; sourceTree = "<group>"; };
+		4050568725DAD3B600CA7639 /* SyncPerkNotificationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncPerkNotificationActions.swift; sourceTree = "<group>"; };
+		4050568A25DAD49E00CA7639 /* CastlesAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastlesAppViewModel.swift; sourceTree = "<group>"; };
 		4069D20125C706E700375502 /* CastleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleEffect.swift; sourceTree = "<group>"; };
 		4069D20525C7075100375502 /* CastleFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CastleFire.sks; sourceTree = "<group>"; };
 		4069D20625C7075200375502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +177,7 @@
 				4045222A25D61E44007C3C26 /* Views */,
 				403ECE6125B338F9001203F1 /* Scenes */,
 				403ECE0B25B3372A001203F1 /* CastlesApp.swift */,
+				4050568A25DAD49E00CA7639 /* CastlesAppViewModel.swift */,
 				403ECE0F25B3372B001203F1 /* Assets.xcassets */,
 				4069D20425C7073D00375502 /* ParticleEffects */,
 				403ECE1425B3372B001203F1 /* Info.plist */,
@@ -206,14 +217,17 @@
 				403ECE3725B338C8001203F1 /* GetGoldPublisher.swift */,
 				403ECE3525B338C8001203F1 /* GetOutcomePublisher.swift */,
 				4045222025D616BE007C3C26 /* GetPerksPublisher.swift */,
+				4050567F25DACD0A00CA7639 /* GetPerkNotificationActionPublisher.swift */,
 				403ECE3925B338C8001203F1 /* GetShopItemPublisher.swift */,
 				403ECE3A25B338C8001203F1 /* GetTurnPublisher.swift */,
 				403ECE3E25B338C8001203F1 /* MoveToNextTurn.swift */,
 				403ECE3B25B338C8001203F1 /* PerformBarbarianTurn.swift */,
 				403ECE3C25B338C8001203F1 /* PerformPlayerTurn.swift */,
 				403ECE3425B338C8001203F1 /* PurchaseShopItem.swift */,
+				4050568225DACD6D00CA7639 /* ScheduleNotificationForPerk.swift */,
 				403ECE3825B338C8001203F1 /* UseCastleItem.swift */,
 				4045222325D61708007C3C26 /* UsePerk.swift */,
+				4050568725DAD3B600CA7639 /* SyncPerkNotificationActions.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -241,6 +255,7 @@
 				403ECE4725B338C8001203F1 /* ShopService.swift */,
 				403ECE4825B338C8001203F1 /* TurnService.swift */,
 				4045221D25D614E0007C3C26 /* PerkService.swift */,
+				4050567C25DACB0D00CA7639 /* PerkNotificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -393,17 +408,21 @@
 				403ECE5F25B338C8001203F1 /* KingdomService.swift in Sources */,
 				4069D20225C706E700375502 /* CastleEffect.swift in Sources */,
 				403ECE2D25B338B4001203F1 /* Outcome.swift in Sources */,
+				4050568B25DAD49E00CA7639 /* CastlesAppViewModel.swift in Sources */,
 				403ECE4E25B338C8001203F1 /* GetGoldPublisher.swift in Sources */,
 				4028AFED25BC7F9700B4589A /* OutcomeView.swift in Sources */,
 				4028DF3F25B7BB6600455EC6 /* CastleCell.swift in Sources */,
 				4028E0A825BC9A37005F6906 /* ShopItemPresenter.swift in Sources */,
 				403ECE5925B338C8001203F1 /* TurnPresenter.swift in Sources */,
+				4050568025DACD0A00CA7639 /* GetPerkNotificationActionPublisher.swift in Sources */,
 				4028AFEA25BC7F6200B4589A /* OutcomeViewModel.swift in Sources */,
 				403ECE5425B338C8001203F1 /* GetCastles.swift in Sources */,
 				403ECE4F25B338C8001203F1 /* UseCastleItem.swift in Sources */,
 				403ECE5625B338C8001203F1 /* GetCastlesPublisher.swift in Sources */,
 				403ECE5125B338C8001203F1 /* GetTurnPublisher.swift in Sources */,
 				4045221E25D614E0007C3C26 /* PerkService.swift in Sources */,
+				4050568825DAD3B600CA7639 /* SyncPerkNotificationActions.swift in Sources */,
+				4050567D25DACB0D00CA7639 /* PerkNotificationService.swift in Sources */,
 				403ECE4B25B338C8001203F1 /* PurchaseShopItem.swift in Sources */,
 				403ECE3025B338B4001203F1 /* Turm.swift in Sources */,
 				403ECE6E25B33F5C001203F1 /* ActionCell.swift in Sources */,
@@ -425,6 +444,7 @@
 				4045222125D616BE007C3C26 /* GetPerksPublisher.swift in Sources */,
 				403ECE5225B338C8001203F1 /* PerformBarbarianTurn.swift in Sources */,
 				403ECE3125B338B4001203F1 /* CastleItem.swift in Sources */,
+				4050568325DACD6D00CA7639 /* ScheduleNotificationForPerk.swift in Sources */,
 				403ECE5325B338C8001203F1 /* PerformPlayerTurn.swift in Sources */,
 				403ECE4C25B338C8001203F1 /* GetOutcomePublisher.swift in Sources */,
 				403ECE5D25B338C8001203F1 /* TurnService.swift in Sources */,
