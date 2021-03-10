@@ -36,6 +36,7 @@ struct DashboardView: View {
   @State private var isPresentingSheet = false
   @State private var isPresentingErrorAlert = false
   @State private var outcome: Outcome?
+  @State private var isPresentingProfile = false
   
   var gridItems: [GridItem] {
     if verticalSizeClass == .regular {
@@ -64,6 +65,11 @@ struct DashboardView: View {
         }
       }
       .navigationTitle("Kingdom")
+      .navigationBarItems(leading: Button(action: {
+        withAnimation{ self.isPresentingProfile.toggle() }
+      }, label: {
+        Image(systemName: "person.fill")
+      }))
     }
     .navigationViewStyle(StackNavigationViewStyle())
     .onReceive(viewModel.$turns, perform: { turns in
@@ -95,6 +101,7 @@ struct DashboardView: View {
             message: Text(viewModel.errorMessage?.message ?? ""),
             dismissButton: .default(Text("OK")))
     })
+    .modifier(SlideInViewModifier(rootView: ProfileView(), isPresenting: $isPresentingProfile))
   }
   
   var dashboard: some View {
