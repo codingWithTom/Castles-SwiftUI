@@ -64,6 +64,9 @@
 		4069D20825C7075200375502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4069D20625C7075200375502 /* Assets.xcassets */; };
 		4069D20B25C707F500375502 /* SparklingCastle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4069D20A25C707F500375502 /* SparklingCastle.sks */; };
 		4069D20F25C7086300375502 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4069D20E25C7086300375502 /* SpriteKit.framework */; };
+		40FA9AA325F5274C007D90D0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA9AA225F5274C007D90D0 /* ProfileView.swift */; };
+		40FA9AA625F528DD007D90D0 /* SlideInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA9AA525F528DD007D90D0 /* SlideInView.swift */; };
+		40FA9AAA25F52B11007D90D0 /* SlideInViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA9AA925F52B11007D90D0 /* SlideInViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +129,9 @@
 		4069D20625C7075200375502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4069D20A25C707F500375502 /* SparklingCastle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparklingCastle.sks; sourceTree = "<group>"; };
 		4069D20E25C7086300375502 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		40FA9AA225F5274C007D90D0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		40FA9AA525F528DD007D90D0 /* SlideInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInView.swift; sourceTree = "<group>"; };
+		40FA9AA925F52B11007D90D0 /* SlideInViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +272,7 @@
 				403ECE6225B33905001203F1 /* Dashboard */,
 				403ECE6325B3390A001203F1 /* Outcome */,
 				4028E0A325BC98C1005F6906 /* Shop */,
+				40FA9AA125F5273E007D90D0 /* Profile */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -293,6 +300,7 @@
 		4045222A25D61E44007C3C26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				40FA9AA825F52B02007D90D0 /* SlideIn */,
 				4045222E25D61E70007C3C26 /* ProgressView */,
 			);
 			path = Views;
@@ -331,6 +339,23 @@
 				4069D20E25C7086300375502 /* SpriteKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40FA9AA125F5273E007D90D0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				40FA9AA225F5274C007D90D0 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		40FA9AA825F52B02007D90D0 /* SlideIn */ = {
+			isa = PBXGroup;
+			children = (
+				40FA9AA525F528DD007D90D0 /* SlideInView.swift */,
+				40FA9AA925F52B11007D90D0 /* SlideInViewModifier.swift */,
+			);
+			path = SlideIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40FA9AA625F528DD007D90D0 /* SlideInView.swift in Sources */,
 				403ECE5F25B338C8001203F1 /* KingdomService.swift in Sources */,
 				4069D20225C706E700375502 /* CastleEffect.swift in Sources */,
 				403ECE2D25B338B4001203F1 /* Outcome.swift in Sources */,
@@ -445,12 +471,14 @@
 				403ECE5225B338C8001203F1 /* PerformBarbarianTurn.swift in Sources */,
 				403ECE3125B338B4001203F1 /* CastleItem.swift in Sources */,
 				4050568325DACD6D00CA7639 /* ScheduleNotificationForPerk.swift in Sources */,
+				40FA9AA325F5274C007D90D0 /* ProfileView.swift in Sources */,
 				403ECE5325B338C8001203F1 /* PerformPlayerTurn.swift in Sources */,
 				403ECE4C25B338C8001203F1 /* GetOutcomePublisher.swift in Sources */,
 				403ECE5D25B338C8001203F1 /* TurnService.swift in Sources */,
 				404BFB1025C3A11C00342556 /* ErrorMessageViewModel.swift in Sources */,
 				4045223025D61E80007C3C26 /* ProgressViewModel.swift in Sources */,
 				4028E0AE25BC9D5E005F6906 /* ShopView.swift in Sources */,
+				40FA9AAA25F52B11007D90D0 /* SlideInViewModifier.swift in Sources */,
 				403ECE6625B3391D001203F1 /* DashboardView.swift in Sources */,
 				403ECE4D25B338C8001203F1 /* CreateCastle.swift in Sources */,
 				403ECE5825B338C8001203F1 /* CastlePresenter.swift in Sources */,
