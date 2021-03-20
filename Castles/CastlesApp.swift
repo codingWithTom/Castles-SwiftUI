@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct CastlesApp: App {
-  private let viewModel = CastlesAppViewModel()
+  @StateObject private var viewModel = CastlesAppViewModel()
   
   var body: some Scene {
     WindowGroup {
