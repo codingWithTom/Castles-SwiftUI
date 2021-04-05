@@ -25,4 +25,16 @@ struct Perk: Codable {
     let endDate = lastUsedDate.addingTimeInterval(cooldownTime)
     return Date() > endDate
   }
+  
+  var cooldownDate: Date {
+    return lastUsedDate.addingTimeInterval(cooldownTime)
+  }
+  
+  var passedCooldownTime: Double {
+    lastUsedDate.timeIntervalSinceNow * -1
+  }
+  
+  var remainingCooldownTime: Double {
+    max(cooldownDate.timeIntervalSince(Date()), 0)
+  }
 }
