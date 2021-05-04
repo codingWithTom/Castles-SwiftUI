@@ -12,5 +12,6 @@ struct WidgetsBundle: WidgetBundle {
   @WidgetBundleBuilder
   var body: some Widget {
     CastlesWidget()
+    PerkWidget()
   }
 }

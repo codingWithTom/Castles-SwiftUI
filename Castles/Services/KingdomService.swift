@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import WidgetKit
 
 protocol KingdomService {
   var castlesPublisher: AnyPublisher<[Castle], Never> { get }
@@ -23,6 +24,14 @@ protocol KingdomService {
 
 final class KingdomServiceAdapter: KingdomService {
   static let shared = KingdomServiceAdapter()
+  
+  private var sharedFileURL: URL {
+    guard
+      let directory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.codingWithTom.castles.container")
+    else { return fileURL }
+    return URL(fileURLWithPath: "castles", relativeTo: directory)
+  }
+  
   private var fileURL: URL {
     let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     return URL(fileURLWithPath: "castles", relativeTo: directory)
@@ -33,6 +42,7 @@ final class KingdomServiceAdapter: KingdomService {
       goldCurrentValue.value = kingdom.gold
       kingdomCurrentValue.value = kingdom
       saveData()
+      WidgetCenter.shared.reloadAllTimelines()
     }
   }
   private var castleCurrentValue = CurrentValueSubject<[Castle], Never>([])
@@ -88,14 +98,14 @@ private extension KingdomServiceAdapter {
   func saveData() {
     do {
       let data = try JSONEncoder().encode(kingdom)
-      try data.write(to: fileURL)
+      try data.write(to: sharedFileURL)
     } catch {
       print("Error saving file: \(error)")
     }
   }
   
   func retrieveData() {
-    if let data = try? Data(contentsOf: fileURL), let kingdom = try? JSONDecoder().decode(Kingdom.self, from: data) {
+    if let data = try? Data(contentsOf: sharedFileURL), let kingdom = try? JSONDecoder().decode(Kingdom.self, from: data) {
       self.kingdom = kingdom
     } else {
       self.kingdom = .new

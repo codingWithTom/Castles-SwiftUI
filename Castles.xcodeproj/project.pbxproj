@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400FF5202640D54C00B1D45B /* PerkTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400FF51F2640D54C00B1D45B /* PerkTimelineProvider.swift */; };
+		400FF5262640D56900B1D45B /* PerkWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400FF5252640D56900B1D45B /* PerkWidget.swift */; };
+		400FF52B2640D58600B1D45B /* Perk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045221925D61471007C3C26 /* Perk.swift */; };
+		400FF5312640D99E00B1D45B /* PerkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400FF5302640D99E00B1D45B /* PerkService.swift */; };
+		400FF5372640DA2E00B1D45B /* GetPerkWithMostRecentCooldown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400FF5362640DA2E00B1D45B /* GetPerkWithMostRecentCooldown.swift */; };
 		4028AFEA25BC7F6200B4589A /* OutcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028AFE925BC7F6200B4589A /* OutcomeViewModel.swift */; };
 		4028AFED25BC7F9700B4589A /* OutcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028AFEC25BC7F9700B4589A /* OutcomeView.swift */; };
 		4028DF3F25B7BB6600455EC6 /* CastleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028DF3E25B7BB6600455EC6 /* CastleCell.swift */; };
@@ -59,6 +64,8 @@
 		4050568325DACD6D00CA7639 /* ScheduleNotificationForPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050568225DACD6D00CA7639 /* ScheduleNotificationForPerk.swift */; };
 		4050568825DAD3B600CA7639 /* SyncPerkNotificationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050568725DAD3B600CA7639 /* SyncPerkNotificationActions.swift */; };
 		4050568B25DAD49E00CA7639 /* CastlesAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4050568A25DAD49E00CA7639 /* CastlesAppViewModel.swift */; };
+		405C9FF9263F4167008E198B /* Kingdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403ECE2625B338B4001203F1 /* Kingdom.swift */; };
+		405C9FFE263F416B008E198B /* CastlesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404BFB0C25C3A02400342556 /* CastlesError.swift */; };
 		4068E5F0261A72FA00EE6864 /* Perk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045221925D61471007C3C26 /* Perk.swift */; };
 		4068E5F5261A758800EE6864 /* PerksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068E5F4261A758800EE6864 /* PerksService.swift */; };
 		4068E5FC261A768700EE6864 /* ShortcutComplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068E5FB261A768700EE6864 /* ShortcutComplication.swift */; };
@@ -74,6 +81,8 @@
 		407BC27D261A8CCE001E5531 /* CastleComplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407BC27C261A8CCE001E5531 /* CastleComplication.swift */; };
 		407BC282261A9130001E5531 /* GetCastleWithLowestHP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407BC281261A9130001E5531 /* GetCastleWithLowestHP.swift */; };
 		407BC287261A91B6001E5531 /* CastleComplicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407BC286261A91B6001E5531 /* CastleComplicationProvider.swift */; };
+		40BAC3DC2640CA870078E82F /* GetCastleWithHighestAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAC3D22640CA830078E82F /* GetCastleWithHighestAttack.swift */; };
+		40BAC3EB2640D3E90078E82F /* KindgdomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAC3EA2640D3E90078E82F /* KindgdomService.swift */; };
 		40BC931F2606448F00B544B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40BC931E2606448F00B544B3 /* Assets.xcassets */; };
 		40BC93262606448F00B544B3 /* CastlesWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 40BC93252606448F00B544B3 /* CastlesWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		40BC932F2606448F00B544B3 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BC932E2606448F00B544B3 /* NotificationController.swift */; };
@@ -174,6 +183,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		400FF51F2640D54C00B1D45B /* PerkTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkTimelineProvider.swift; sourceTree = "<group>"; };
+		400FF5252640D56900B1D45B /* PerkWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkWidget.swift; sourceTree = "<group>"; };
+		400FF5302640D99E00B1D45B /* PerkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkService.swift; sourceTree = "<group>"; };
+		400FF5362640DA2E00B1D45B /* GetPerkWithMostRecentCooldown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPerkWithMostRecentCooldown.swift; sourceTree = "<group>"; };
 		4028AFE925BC7F6200B4589A /* OutcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeViewModel.swift; sourceTree = "<group>"; };
 		4028AFEC25BC7F9700B4589A /* OutcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeView.swift; sourceTree = "<group>"; };
 		4028DF3E25B7BB6600455EC6 /* CastleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleCell.swift; sourceTree = "<group>"; };
@@ -228,6 +241,8 @@
 		4050568225DACD6D00CA7639 /* ScheduleNotificationForPerk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNotificationForPerk.swift; sourceTree = "<group>"; };
 		4050568725DAD3B600CA7639 /* SyncPerkNotificationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncPerkNotificationActions.swift; sourceTree = "<group>"; };
 		4050568A25DAD49E00CA7639 /* CastlesAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastlesAppViewModel.swift; sourceTree = "<group>"; };
+		405CA007263F4216008E198B /* Castles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Castles.entitlements; sourceTree = "<group>"; };
+		405CA010263F4258008E198B /* CastlesWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CastlesWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		4068E5F4261A758800EE6864 /* PerksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerksService.swift; sourceTree = "<group>"; };
 		4068E5FB261A768700EE6864 /* ShortcutComplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutComplication.swift; sourceTree = "<group>"; };
 		4068E602261A778600EE6864 /* ShortcutComplicationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutComplicationProvider.swift; sourceTree = "<group>"; };
@@ -242,6 +257,8 @@
 		407BC27C261A8CCE001E5531 /* CastleComplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleComplication.swift; sourceTree = "<group>"; };
 		407BC281261A9130001E5531 /* GetCastleWithLowestHP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCastleWithLowestHP.swift; sourceTree = "<group>"; };
 		407BC286261A91B6001E5531 /* CastleComplicationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleComplicationProvider.swift; sourceTree = "<group>"; };
+		40BAC3D22640CA830078E82F /* GetCastleWithHighestAttack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCastleWithHighestAttack.swift; sourceTree = "<group>"; };
+		40BAC3EA2640D3E90078E82F /* KindgdomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindgdomService.swift; sourceTree = "<group>"; };
 		40BC931C2606448E00B544B3 /* CastlesWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastlesWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40BC931E2606448F00B544B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40BC93202606448F00B544B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -319,6 +336,7 @@
 		403ECDFF25B3372A001203F1 = {
 			isa = PBXGroup;
 			children = (
+				405CA010263F4258008E198B /* CastlesWidgetsExtension.entitlements */,
 				40BC9349260644C200B544B3 /* Shared */,
 				403ECE0A25B3372A001203F1 /* Castles */,
 				40BC931D2606448E00B544B3 /* CastlesWatch */,
@@ -343,6 +361,7 @@
 		403ECE0A25B3372A001203F1 /* Castles */ = {
 			isa = PBXGroup;
 			children = (
+				405CA007263F4216008E198B /* Castles.entitlements */,
 				403ECE2525B338B4001203F1 /* Model */,
 				403ECE4625B338C8001203F1 /* Services */,
 				403ECE3325B338C8001203F1 /* UseCases */,
@@ -542,6 +561,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		40BAC3D12640CA730078E82F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				40BAC3D22640CA830078E82F /* GetCastleWithHighestAttack.swift */,
+				400FF5362640DA2E00B1D45B /* GetPerkWithMostRecentCooldown.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		40BAC3E92640D3DC0078E82F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				40BAC3EA2640D3E90078E82F /* KindgdomService.swift */,
+				400FF5302640D99E00B1D45B /* PerkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		40BC931D2606448E00B544B3 /* CastlesWatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +683,8 @@
 		40FCA4D5263F11E500E843BD /* CastlesWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				40BAC3E92640D3DC0078E82F /* Services */,
+				40BAC3D12640CA730078E82F /* UseCases */,
 				40FCA508263F14A800E843BD /* Providers */,
 				40FCA4FD263F12DA00E843BD /* Widgets */,
 				40FCA4EE263F123300E843BD /* WidgetsBundle.swift */,
@@ -660,6 +699,7 @@
 			isa = PBXGroup;
 			children = (
 				40FCA4FE263F12F600E843BD /* CastleWidget.swift */,
+				400FF5252640D56900B1D45B /* PerkWidget.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -668,6 +708,7 @@
 			isa = PBXGroup;
 			children = (
 				40FCA4D6263F11E500E843BD /* CastleTimelineProvider.swift */,
+				400FF51F2640D54C00B1D45B /* PerkTimelineProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -935,10 +976,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				40FCA4E9263F11FE00E843BD /* Castle.swift in Sources */,
+				40BAC3EB2640D3E90078E82F /* KindgdomService.swift in Sources */,
+				40BAC3DC2640CA870078E82F /* GetCastleWithHighestAttack.swift in Sources */,
+				400FF5262640D56900B1D45B /* PerkWidget.swift in Sources */,
 				40FCA4DC263F11E600E843BD /* CastlesWidgets.intentdefinition in Sources */,
+				400FF5312640D99E00B1D45B /* PerkService.swift in Sources */,
+				405C9FF9263F4167008E198B /* Kingdom.swift in Sources */,
 				40FCA4D7263F11E500E843BD /* CastleTimelineProvider.swift in Sources */,
 				40FCA4FF263F12F600E843BD /* CastleWidget.swift in Sources */,
+				400FF5202640D54C00B1D45B /* PerkTimelineProvider.swift in Sources */,
+				405C9FFE263F416B008E198B /* CastlesError.swift in Sources */,
+				400FF5372640DA2E00B1D45B /* GetPerkWithMostRecentCooldown.swift in Sources */,
 				40FCA4F4263F124200E843BD /* WidgetsBundle.swift in Sources */,
+				400FF52B2640D58600B1D45B /* Perk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1085,8 +1135,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Castles/Castles.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Castles/Preview Content\"";
+				DEVELOPMENT_TEAM = SP7M63P6TC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Castles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1107,8 +1159,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Castles/Castles.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Castles/Preview Content\"";
+				DEVELOPMENT_TEAM = SP7M63P6TC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Castles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1212,7 +1266,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CastlesWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SP7M63P6TC;
 				INFOPLIST_FILE = CastlesWidgets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1233,7 +1289,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CastlesWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SP7M63P6TC;
 				INFOPLIST_FILE = CastlesWidgets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -9,29 +9,40 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-struct CastleTimelineProvider: IntentTimelineProvider {
-  
-  func placeholder(in context: Context) -> CastleEntry {
-    CastleEntry(date: Date(), castle: Castle(castleID: "0", imageName: "castle1", name: "Swift Castle"))
+struct CastleTimelineProvider: TimelineProvider {
+  struct Dependencies {
+    var getCastleWithHighestAttack: GetCastleWithHighestAttack = GetCastleWithHighestAttackAdapter()
   }
   
-  func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (CastleEntry) -> ()) {
-    let entry = CastleEntry(date: Date(), castle: Castle(castleID: "0", imageName: "castle1", name: "Swift Castle"))
+  private let dependencies: Dependencies
+  private var sampleCastle: Castle {
+    Castle(castleID: "0", imageName: "castle1", name: "Swift Castle")
+  }
+  
+  init(dependencies: Dependencies = .init()) {
+    self.dependencies = dependencies
+  }
+  
+  func placeholder(in context: Context) -> CastleEntry {
+    CastleEntry(date: Date(), castle: sampleCastle)
+  }
+  
+  func getSnapshot(in context: Context, completion: @escaping (CastleEntry) -> Void) {
+    let entry: CastleEntry
+    if context.isPreview {
+      entry = CastleEntry(date: Date(), castle: sampleCastle)
+    } else {
+      let highestAttackCastle = dependencies.getCastleWithHighestAttack.execute()
+      entry = CastleEntry(date: Date(), castle: highestAttackCastle ?? sampleCastle)
+    }
     completion(entry)
   }
   
-  func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<CastleEntry>) -> ()) {
-    var entries: [CastleEntry] = []
+  func getTimeline(in context: Context, completion: @escaping (Timeline<CastleEntry>) -> Void) {
+    let highestAttackCastle = dependencies.getCastleWithHighestAttack.execute()
+    let entry = CastleEntry(date: Date(), castle: highestAttackCastle ?? sampleCastle)
     
-    // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-    let currentDate = Date()
-    for hourOffset in 0 ..< 5 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-      let entry = CastleEntry(date: entryDate, castle: Castle(castleID: "0", imageName: "castle1", name: "Swift Castle"))
-      entries.append(entry)
-    }
-    
-    let timeline = Timeline(entries: entries, policy: .atEnd)
+    let timeline = Timeline(entries: [entry], policy: .never)
     completion(timeline)
   }
 }
