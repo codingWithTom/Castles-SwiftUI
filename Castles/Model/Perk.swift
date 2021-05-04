@@ -37,4 +37,8 @@ struct Perk: Codable {
   var remainingCooldownTime: Double {
     max(cooldownDate.timeIntervalSince(Date()), 0)
   }
+  
+  func remainingCooldownTimeFrom(date: Date) -> Double {
+    max(cooldownDate.timeIntervalSince(date), 0)
+  }
 }

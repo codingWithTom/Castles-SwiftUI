@@ -24,6 +24,12 @@ final class PerkServiceAdapter: PerkService {
     }
   }
   private var currentValuePerks = CurrentValueSubject<[Perk], Never>([])
+  private var sharedFileURL: URL {
+    guard
+      let directory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.codingWithTom.castles.container")
+    else { return fileURL }
+    return URL(fileURLWithPath: "perks", relativeTo: directory)
+  }
   private var fileURL: URL {
     let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     return URL(fileURLWithPath: "perks", relativeTo: directory)
@@ -51,12 +57,12 @@ final class PerkServiceAdapter: PerkService {
 
 private extension PerkServiceAdapter {
   func retrieveData() {
-    if let data = try? Data(contentsOf: fileURL), let perks = try? JSONDecoder().decode([Perk].self, from: data) {
+    if let data = try? Data(contentsOf: sharedFileURL), let perks = try? JSONDecoder().decode([Perk].self, from: data) {
       self.perks = perks
     } else {
       self.perks = [
-        Perk(name: "Harvest", value: 300, imageName: "plant", type: .gold, cooldownTime: 5, lastUsedDate: Date()),
-        Perk(name: "Smith", value: 20, imageName: "anvil", type: .attack, cooldownTime: 20, lastUsedDate: Date())
+        Perk(name: "Harvest", value: 300, imageName: "plant", type: .gold, cooldownTime: 30, lastUsedDate: Date()),
+        Perk(name: "Smith", value: 20, imageName: "anvil", type: .attack, cooldownTime: 60, lastUsedDate: Date())
       ]
     }
   }
@@ -64,7 +70,7 @@ private extension PerkServiceAdapter {
   func saveData() {
     do {
       let data = try JSONEncoder().encode(perks)
-      try data.write(to: fileURL)
+      try data.write(to: sharedFileURL)
     } catch {
       print("Error saving perks")
     }
