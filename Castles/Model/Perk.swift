@@ -19,6 +19,7 @@ struct Perk: Codable {
   let imageName: String
   let type: PerkType
   let cooldownTime: Double
+  let iconName: String
   var lastUsedDate: Date
   
   var isCooldownPassed: Bool {

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400C8B3B2ADE02E500A94D3F /* PerkActivityConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C8B3A2ADE02E500A94D3F /* PerkActivityConfiguration.swift */; };
+		400C8B3D2ADE034600A94D3F /* PerkAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C8B3C2ADE034600A94D3F /* PerkAttributes.swift */; };
+		400C8B3E2ADE034600A94D3F /* PerkAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C8B3C2ADE034600A94D3F /* PerkAttributes.swift */; };
+		400C8B402ADE082200A94D3F /* StartPerkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C8B3F2ADE082200A94D3F /* StartPerkActivity.swift */; };
+		400C8B422ADE0B3A00A94D3F /* ScheduleActivityBGTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C8B412ADE0B3A00A94D3F /* ScheduleActivityBGTask.swift */; };
+		400C8B442ADE0BA800A94D3F /* HandleActivtyUpdateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C8B432ADE0BA800A94D3F /* HandleActivtyUpdateTask.swift */; };
 		400FF5202640D54C00B1D45B /* PerkTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400FF51F2640D54C00B1D45B /* PerkTimelineProvider.swift */; };
 		400FF5262640D56900B1D45B /* PerkWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400FF5252640D56900B1D45B /* PerkWidget.swift */; };
 		400FF52B2640D58600B1D45B /* Perk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045221925D61471007C3C26 /* Perk.swift */; };
@@ -183,6 +189,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		400C8B3A2ADE02E500A94D3F /* PerkActivityConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkActivityConfiguration.swift; sourceTree = "<group>"; };
+		400C8B3C2ADE034600A94D3F /* PerkAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkAttributes.swift; sourceTree = "<group>"; };
+		400C8B3F2ADE082200A94D3F /* StartPerkActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPerkActivity.swift; sourceTree = "<group>"; };
+		400C8B412ADE0B3A00A94D3F /* ScheduleActivityBGTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleActivityBGTask.swift; sourceTree = "<group>"; };
+		400C8B432ADE0BA800A94D3F /* HandleActivtyUpdateTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleActivtyUpdateTask.swift; sourceTree = "<group>"; };
 		400FF51F2640D54C00B1D45B /* PerkTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkTimelineProvider.swift; sourceTree = "<group>"; };
 		400FF5252640D56900B1D45B /* PerkWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkWidget.swift; sourceTree = "<group>"; };
 		400FF5302640D99E00B1D45B /* PerkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkService.swift; sourceTree = "<group>"; };
@@ -324,6 +335,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		400C8B392ADE02CB00A94D3F /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				400C8B3A2ADE02E500A94D3F /* PerkActivityConfiguration.swift */,
+				400C8B3C2ADE034600A94D3F /* PerkAttributes.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		4028E0A325BC98C1005F6906 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +443,9 @@
 				4050568725DAD3B600CA7639 /* SyncPerkNotificationActions.swift */,
 				40BC937B2606465D00B544B3 /* StartWatchSession.swift */,
 				40BC937C2606465D00B544B3 /* SyncWatchContext.swift */,
+				400C8B3F2ADE082200A94D3F /* StartPerkActivity.swift */,
+				400C8B412ADE0B3A00A94D3F /* ScheduleActivityBGTask.swift */,
+				400C8B432ADE0BA800A94D3F /* HandleActivtyUpdateTask.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -687,6 +710,7 @@
 				40BAC3D12640CA730078E82F /* UseCases */,
 				40FCA508263F14A800E843BD /* Providers */,
 				40FCA4FD263F12DA00E843BD /* Widgets */,
+				400C8B392ADE02CB00A94D3F /* Activity */,
 				40FCA4EE263F123300E843BD /* WidgetsBundle.swift */,
 				40FCA4D8263F11E500E843BD /* CastlesWidgets.intentdefinition */,
 				40FCA4D9263F11E600E843BD /* Assets.xcassets */,
@@ -881,6 +905,7 @@
 				403ECE5F25B338C8001203F1 /* KingdomService.swift in Sources */,
 				40BC934B260644E500B544B3 /* WatchConnectivityConstants.swift in Sources */,
 				4069D20225C706E700375502 /* CastleEffect.swift in Sources */,
+				400C8B442ADE0BA800A94D3F /* HandleActivtyUpdateTask.swift in Sources */,
 				403ECE2D25B338B4001203F1 /* Outcome.swift in Sources */,
 				4050568B25DAD49E00CA7639 /* CastlesAppViewModel.swift in Sources */,
 				403ECE4E25B338C8001203F1 /* GetGoldPublisher.swift in Sources */,
@@ -888,6 +913,7 @@
 				4028DF3F25B7BB6600455EC6 /* CastleCell.swift in Sources */,
 				4028E0A825BC9A37005F6906 /* ShopItemPresenter.swift in Sources */,
 				403ECE5925B338C8001203F1 /* TurnPresenter.swift in Sources */,
+				400C8B402ADE082200A94D3F /* StartPerkActivity.swift in Sources */,
 				4050568025DACD0A00CA7639 /* GetPerkNotificationActionPublisher.swift in Sources */,
 				4028AFEA25BC7F6200B4589A /* OutcomeViewModel.swift in Sources */,
 				403ECE5425B338C8001203F1 /* GetCastles.swift in Sources */,
@@ -904,6 +930,7 @@
 				4045222C25D61E54007C3C26 /* ProgressView.swift in Sources */,
 				403ECE5C25B338C8001203F1 /* ShopService.swift in Sources */,
 				403ECE5025B338C8001203F1 /* GetShopItemPublisher.swift in Sources */,
+				400C8B422ADE0B3A00A94D3F /* ScheduleActivityBGTask.swift in Sources */,
 				4028E0AB25BC9AAE005F6906 /* CastleItemPresenter.swift in Sources */,
 				4045222825D61B13007C3C26 /* PerkPresenter.swift in Sources */,
 				403ECE5725B338C8001203F1 /* CurrencyPresenter.swift in Sources */,
@@ -918,6 +945,7 @@
 				4045222425D61708007C3C26 /* UsePerk.swift in Sources */,
 				403ECE2C25B338B4001203F1 /* Kingdom.swift in Sources */,
 				4045222125D616BE007C3C26 /* GetPerksPublisher.swift in Sources */,
+				400C8B3D2ADE034600A94D3F /* PerkAttributes.swift in Sources */,
 				403ECE5225B338C8001203F1 /* PerformBarbarianTurn.swift in Sources */,
 				403ECE3125B338B4001203F1 /* CastleItem.swift in Sources */,
 				40BC937E2606465D00B544B3 /* SyncWatchContext.swift in Sources */,
@@ -976,12 +1004,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				40FCA4E9263F11FE00E843BD /* Castle.swift in Sources */,
+				400C8B3B2ADE02E500A94D3F /* PerkActivityConfiguration.swift in Sources */,
 				40BAC3EB2640D3E90078E82F /* KindgdomService.swift in Sources */,
 				40BAC3DC2640CA870078E82F /* GetCastleWithHighestAttack.swift in Sources */,
 				400FF5262640D56900B1D45B /* PerkWidget.swift in Sources */,
 				40FCA4DC263F11E600E843BD /* CastlesWidgets.intentdefinition in Sources */,
 				400FF5312640D99E00B1D45B /* PerkService.swift in Sources */,
 				405C9FF9263F4167008E198B /* Kingdom.swift in Sources */,
+				400C8B3E2ADE034600A94D3F /* PerkAttributes.swift in Sources */,
 				40FCA4D7263F11E500E843BD /* CastleTimelineProvider.swift in Sources */,
 				40FCA4FF263F12F600E843BD /* CastleWidget.swift in Sources */,
 				400FF5202640D54C00B1D45B /* PerkTimelineProvider.swift in Sources */,
@@ -1138,10 +1168,10 @@
 				CODE_SIGN_ENTITLEMENTS = Castles/Castles.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Castles/Preview Content\"";
-				DEVELOPMENT_TEAM = SP7M63P6TC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Castles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1162,10 +1192,10 @@
 				CODE_SIGN_ENTITLEMENTS = Castles/Castles.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Castles/Preview Content\"";
-				DEVELOPMENT_TEAM = SP7M63P6TC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Castles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1184,6 +1214,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = CastlesWatch_Extension;
 				INFOPLIST_FILE = CastlesWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodingWithTom.Castles.watchkitapp;
@@ -1192,7 +1223,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -1203,6 +1234,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = CastlesWatch_Extension;
 				INFOPLIST_FILE = CastlesWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodingWithTom.Castles.watchkitapp;
@@ -1211,7 +1243,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -1221,6 +1253,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CastlesWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "CastlesWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1234,7 +1267,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -1244,6 +1277,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CastlesWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "CastlesWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1257,7 +1291,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -1268,9 +1302,9 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CastlesWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SP7M63P6TC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CastlesWidgets/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1291,9 +1325,9 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CastlesWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SP7M63P6TC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CastlesWidgets/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
