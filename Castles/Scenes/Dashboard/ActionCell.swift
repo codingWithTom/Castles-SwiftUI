@@ -44,6 +44,22 @@ struct ActionCell: View {
       }
       if viewModel.startDate != nil {
         progressView
+          .overlay(
+            VStack {
+              Spacer()
+              HStack {
+                Spacer()
+                Button(action: { viewModel.startActivity() }) {                
+                  Image(systemName: "livephoto")
+                    .resizable()
+                    .scaledToFit()
+                }
+                  .tint(.green)
+                Spacer()
+              }
+              Spacer()
+            }
+          )
       }
     }
   }
@@ -51,6 +67,6 @@ struct ActionCell: View {
 
 struct ActionCell_Previews: PreviewProvider {
   static var previews: some View {
-    ActionCell(viewModel: ActionViewModel(id: "preview", value: "1,000", name: "Add Castle", imageName: "plus.circle", isIcon: true, effectImageName: "gold", startDate: nil, endDate: nil))
+    ActionCell(viewModel: ActionViewModel(id: "preview", value: "1,000", name: "Add Castle", imageName: "plus.circle", isIcon: true, effectImageName: "gold", startDate: nil, endDate: nil, startActivity: { }))
   }
 }

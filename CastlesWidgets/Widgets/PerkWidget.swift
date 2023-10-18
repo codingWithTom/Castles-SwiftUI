@@ -68,7 +68,7 @@ struct PerkView: View {
 struct PerkWidget_Previews: PreviewProvider {
   static var previews: some View {
     let hourAgo = Date().addingTimeInterval(-3600)
-    return PerkView(entry: PerkEntry(date: Date(), perk: .init(name: "Harvest", value: 100, imageName: "plant", type: .gold, cooldownTime: 30, lastUsedDate: hourAgo)))
+    return PerkView(entry: PerkEntry(date: Date(), perk: .init(name: "Harvest", value: 100, imageName: "plant", type: .gold, cooldownTime: 30, iconName: "", lastUsedDate: hourAgo)))
       .previewContext(WidgetPreviewContext(family: .systemSmall))
   }
 }

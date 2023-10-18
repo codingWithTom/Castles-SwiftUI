@@ -52,6 +52,7 @@ struct ActionViewModel: Identifiable {
   let effectImageName: String
   let startDate: Date?
   let endDate: Date?
+  let startActivity: () -> Void
 }
 
 
@@ -131,7 +132,7 @@ private extension DashboardViewModel {
       self?.perks = perks
       self?.actionItems =
         [DashboardItem.action(ActionViewModel(id: "addCastleAction", value: "- 1,000", name: "Add Castle", imageName: "plus.circle",
-                                             isIcon: true, effectImageName: "gold", startDate: nil, endDate: nil))]
+                                             isIcon: true, effectImageName: "gold", startDate: nil, endDate: nil, startActivity: { }))]
         + perks.map { DashboardItem.action(PerkPresenter.viewModel(for: $0)) }
     }.store(in: &subscriptions)
   }

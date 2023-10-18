@@ -17,7 +17,7 @@ struct PerkTimelineProvider: TimelineProvider {
   var samplePerk: Perk {
     let oneHourAgo = Date().addingTimeInterval(-3600)
     return Perk(id: UUID(), name: "Harvest", value: 100, imageName: "plant", type: .gold,
-                cooldownTime: 30, lastUsedDate: oneHourAgo)
+                cooldownTime: 30, iconName: "", lastUsedDate: oneHourAgo)
   }
   
   init(dependencies: Dependencies = .init()) {

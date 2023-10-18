@@ -61,10 +61,13 @@ private extension PerkServiceAdapter {
       self.perks = perks
     } else {
       self.perks = [
-        Perk(name: "Harvest", value: 300, imageName: "plant", type: .gold, cooldownTime: 30, lastUsedDate: Date()),
-        Perk(name: "Smith", value: 20, imageName: "anvil", type: .attack, cooldownTime: 60, lastUsedDate: Date())
+        Perk(name: "Harvest", value: 300, imageName: "plant", type: .gold, 
+             cooldownTime: 30, iconName: "flag.checkered.circle.fill", lastUsedDate: Date()),
+        Perk(name: "Smith", value: 20, imageName: "anvil", type: .attack,
+             cooldownTime: 60, iconName: "printer.fill", lastUsedDate: Date())
       ]
     }
+    
   }
   
   func saveData() {

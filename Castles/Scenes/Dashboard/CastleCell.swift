@@ -6,13 +6,6 @@
 //
 
 import SwiftUI
-import SpriteKit
-
-final class CastleScene: SKScene {
-  override func didMove(to view: SKView) {
-    self.anchorPoint = CGPoint(x: 0.5, y: 0.2)
-  }
-}
 
 struct CastleCell: View {
   struct Dependencies {
@@ -21,16 +14,6 @@ struct CastleCell: View {
   var dependencies: Dependencies = .init()
   let viewModel: CastleViewModel
   
-  var castleScene: SKScene? {
-    guard let particleNode = dependencies.castleEffect.effect(for: viewModel.condition) else {
-      return nil
-    }
-    let scene = CastleScene(size: CGSize(width: 100, height: 60))
-    scene.backgroundColor = .clear
-    scene.addChild(particleNode)
-    return scene
-  }
-  
   var body: some View {
     VStack(spacing: 4.0) {
       ZStack {
@@ -38,9 +21,6 @@ struct CastleCell: View {
           .resizable()
           .aspectRatio(contentMode: .fit)
           .layoutPriority(10)
-        if let scene = castleScene {
-          SpriteView(scene: scene, options: [.allowsTransparency])
-        }
       }
       Text(viewModel.name)
         .font(.title2)

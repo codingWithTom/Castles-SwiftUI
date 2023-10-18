@@ -19,10 +19,14 @@ final class PerkPresenter {
     switch perk.type {
     case .gold:
       return ActionViewModel(id: perk.id.uuidString, value: "+ \(perk.value)", name: perk.name, imageName: perk.imageName, isIcon: false,
-                             effectImageName: "gold", startDate: startDate, endDate: endDate)
+                             effectImageName: "gold", startDate: startDate, endDate: endDate, startActivity: {
+        StartPerkActivityAdapter.shared.execute(perk)
+      })
     case.attack:
       return ActionViewModel(id: perk.id.uuidString, value: "+ \(perk.value)", name: perk.name, imageName: perk.imageName, isIcon: false,
-                             effectImageName: "sword_side", startDate: startDate, endDate: endDate)
+                             effectImageName: "sword_side", startDate: startDate, endDate: endDate, startActivity: {
+        StartPerkActivityAdapter.shared.execute(perk)
+      })
     }
   }
 }
